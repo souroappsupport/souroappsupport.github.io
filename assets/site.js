@@ -86,3 +86,18 @@
     });
   }
 })();
+
+/* Language menu: remember the choice, close when clicking elsewhere */
+(function () {
+  "use strict";
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a[data-lang]");
+    if (a) { try { localStorage.setItem("sv-lang", a.getAttribute("data-lang")); } catch (err) { /* ignore */ } }
+    document.querySelectorAll("details.lang[open]").forEach(function (d) {
+      if (!d.contains(e.target)) d.open = false;
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") document.querySelectorAll("details.lang[open]").forEach(function (d) { d.open = false; });
+  });
+})();

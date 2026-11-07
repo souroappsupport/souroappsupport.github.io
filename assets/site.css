@@ -564,3 +564,56 @@ td { color: var(--ink-2); }
 .home-body { padding-bottom: 72px; }
 .home-body .section-title { margin-top: 48px; }
 .policy:focus { outline: none; }
+
+/* ---------- Language menu ---------- */
+.lang { position: relative; flex: none; }
+.lang summary {
+  list-style: none; cursor: pointer; height: 40px; display: inline-flex; align-items: center; gap: 6px;
+  padding: 0 12px; border: 1px solid var(--line); border-radius: 999px;
+  color: var(--ink-2); font-size: .9rem; font-weight: 600; white-space: nowrap;
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary:hover, .lang[open] summary { color: var(--ink); background: var(--surface-2); }
+.lang summary .i { width: 18px; height: 18px; }
+.lang .lang-code { display: none; }
+.lang ul {
+  position: absolute; top: calc(100% + 8px); inset-inline-end: 0; z-index: 60;
+  min-width: 190px; margin: 0; padding: 6px; list-style: none;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow);
+}
+.lang ul a {
+  display: block; padding: 8px 12px; border-radius: 9px; color: var(--ink-2); text-decoration: none; font-size: .95rem;
+}
+.lang ul a:hover { background: var(--surface-2); color: var(--ink); }
+.lang ul a[aria-current] { background: var(--accent-soft); color: var(--accent); font-weight: 650; }
+.topbar-inner .brand { min-width: 0; }
+.brand-text { overflow: hidden; text-overflow: ellipsis; }
+.tr-note {
+  display: flex; gap: 8px; align-items: flex-start; margin: 16px 0 0; max-width: 70ch;
+  font-size: .88rem; color: var(--ink-3);
+}
+.tr-note .i { width: 16px; height: 16px; margin-top: 3px; }
+
+/* Phones: keep the app name, drop the word "Privacy", show the language code */
+@media (max-width: 560px) {
+  .brand-text { display: inline; font-size: .95rem; }
+  .brand-sub { display: none; }
+  .lang .lang-name { display: none; }
+  .lang .lang-code { display: inline; }
+  .lang summary { padding: 0 10px; }
+}
+
+/* ---------- Right-to-left (Arabic) ---------- */
+[dir="rtl"] .policy ul.dots > li { padding-left: 0; padding-right: 22px; }
+[dir="rtl"] .policy ul.dots > li::before { left: auto; right: 4px; }
+[dir="rtl"] .policy ul.dots ul { padding-left: 0; padding-right: 4px; }
+[dir="rtl"] .policy ul.dots ul li { padding-left: 0; padding-right: 18px; }
+[dir="rtl"] .policy ul.dots ul li::before { left: auto; right: 2px; }
+[dir="rtl"] .split li { padding-left: 0; padding-right: 18px; }
+[dir="rtl"] .split li::before { left: auto; right: 2px; }
+[dir="rtl"] th, [dir="rtl"] td { text-align: right; }
+[dir="rtl"] .skip { left: auto; right: 16px; }
+[dir="rtl"] .to-top { right: auto; left: 16px; }
+[dir="rtl"] .hero-dial { right: auto; left: -60px; }
+[dir="rtl"] .policy h3 .sub { margin-right: 0; margin-left: 6px; }
+[dir="rtl"] .partner-links .i, [dir="rtl"] .btn .i[href] { transform: scaleX(-1); }
