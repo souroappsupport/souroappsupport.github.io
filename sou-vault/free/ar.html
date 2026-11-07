@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سياسة الخصوصية – Souro Vault Go</title>
+<meta name="description" content="سياسة خصوصية Souro Vault Go لنظام Android: تبقى خزنتك مشفّرة على هاتفك، والإعلانات تأتي من شركاء إعلانيين ويمكن إيقافها.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d13" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="سياسة الخصوصية – Souro Vault Go">
+<meta property="og:description" content="سياسة خصوصية Souro Vault Go لنظام Android: تبقى خزنتك مشفّرة على هاتفك، والإعلانات تأتي من شركاء إعلانيين ويمكن إيقافها.">
+<link rel="alternate" hreflang="en" href="index.html"><link rel="alternate" hreflang="ar" href="ar.html"><link rel="alternate" hreflang="bn" href="bn.html"><link rel="alternate" hreflang="es" href="es.html"><link rel="alternate" hreflang="hi" href="hi.html"><link rel="alternate" hreflang="id" href="id.html"><link rel="alternate" hreflang="pt" href="pt.html"><link rel="alternate" hreflang="ru" href="ru.html"><link rel="alternate" hreflang="tr" href="tr.html">
+<script>(function(){var L=["en", "ar", "bn", "es", "hi", "id", "pt", "ru", "tr"],c=document.documentElement.lang,s=null;try{s=localStorage.getItem("sv-lang")}catch(e){}if(!s&&c==="en"&&!/[?&]lang=en/.test(location.search)){var n=navigator.languages||[navigator.language||""];for(var i=0;i<n.length;i++){var x=String(n[i]).toLowerCase().split("-")[0];if(x==="in")x="id";if(x==="en")break;if(L.indexOf(x)>=0){s=x;break}}}if(s&&s!==c&&L.indexOf(s)>=0)location.replace(s==="en"?"index.html":s+".html")})()</script>
+<link rel="icon" href="vault_free.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/site.css">
+<script>try{var t=localStorage.getItem("sv-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body data-app="go">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3M12 14.5v2"/></symbol><symbol id="i-cloud-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M7.4 7.5A5 5 0 0 0 7 17.5h10.5"/><path d="M20.3 16.4A4 4 0 0 0 17 9.5h-.4A6 6 0 0 0 10 5.2"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M4 10v4a1 1 0 0 0 1 1h2l7 4V5L7 9H5a1 1 0 0 0-1 1z"/><path d="M17.5 9.5a3.5 3.5 0 0 1 0 5"/><path d="M7 15l1.2 4.5"/></symbol><symbol id="i-toggle" viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="10" rx="5"/><circle cx="16.5" cy="12" r="2.8"/></symbol><symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 6.1c.5-.1.9-.1 1.4-.1 5 0 8.5 4.2 9.5 6-.4.8-1.3 2.1-2.6 3.3"/><path d="M6.3 7.5C4.4 8.8 3.1 10.6 2.5 12c1 1.8 4.5 6 9.5 6 1.6 0 3-.4 4.3-1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol><symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M8.6 16.2a5 5 0 0 1 6.8 0"/><path d="M5.2 12.7a10 10 0 0 1 4.6-2.4"/><path d="M14.5 10.4a10 10 0 0 1 4.3 2.3"/><path d="M2 9.2a15 15 0 0 1 4.6-2.8"/><path d="M10.5 5.1A15 15 0 0 1 22 9.2"/><circle cx="12" cy="19.5" r="1" fill="currentColor" stroke="none"/></symbol><symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h3"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-ext" viewBox="0 0 24 24"><path d="M8 16L16 8M9.5 8H16v6.5"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><circle cx="17.5" cy="5.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="17.5" cy="18.5" r="2.5"/><path d="M8.7 10.8l6.6-3.9M8.7 13.2l6.6 3.9"/></symbol><symbol id="i-restore" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 7.7-1.5"/></symbol><symbol id="i-open" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol><symbol id="i-archive" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1.5"/><path d="M5 9v9.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V9M10 13h4"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9.5 16.5h-19z"/><path d="M12 10v4.5M12 17.2v.1"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 6 8-6"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.4-7.5 9.5-4.3-1.1-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12.2l2.2 2.2 4.3-4.6"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol></svg>
+<a class="skip" href="#policy">انتقل إلى السياسة</a>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="ar.html"><img class="mark" src="vault_free.svg" alt="" width="32" height="32"><span class="brand-text">Souro Vault Go <span class="brand-sub">الخصوصية</span></span></a>
+    <details class="lang"><summary aria-label="اللغة"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><span class="lang-name">العربية</span><span class="lang-code">AR</span></summary><ul><li><a href="index.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="ar.html" hreflang="ar" lang="ar" data-lang="ar" aria-current="true">العربية</a></li><li><a href="bn.html" hreflang="bn" lang="bn" data-lang="bn">বাংলা</a></li><li><a href="es.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="hi.html" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li><li><a href="id.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="pt.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="ru.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="tr.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li></ul></details>
+    <button class="theme-toggle" type="button" aria-label="تبديل المظهر"><svg class="i moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="i sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
+  </div>
+</header>
+<main id="content">
+  <section class="hero">
+    <div class="wrap">
+      <svg class="hero-dial" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor"><circle cx="100" cy="100" r="97" stroke-width="1.5"/><circle cx="100" cy="100" r="66" stroke-width="9"/><circle cx="100" cy="100" r="44" stroke-width="1.5"/><path d="M100.00 24.00L100.00 12.00M113.20 25.15L115.28 13.34M125.99 28.58L130.10 17.31M138.00 34.18L144.00 23.79M148.85 41.78L156.57 32.59M158.22 51.15L167.41 43.43M165.82 62.00L176.21 56.00M171.42 74.01L182.69 69.90M174.85 86.80L186.66 84.72M176.00 100.00L188.00 100.00M174.85 113.20L186.66 115.28M171.42 125.99L182.69 130.10M165.82 138.00L176.21 144.00M158.22 148.85L167.41 156.57M148.85 158.22L156.57 167.41M138.00 165.82L144.00 176.21M125.99 171.42L130.10 182.69M113.20 174.85L115.28 186.66M100.00 176.00L100.00 188.00M86.80 174.85L84.72 186.66M74.01 171.42L69.90 182.69M62.00 165.82L56.00 176.21M51.15 158.22L43.43 167.41M41.78 148.85L32.59 156.57M34.18 138.00L23.79 144.00M28.58 125.99L17.31 130.10M25.15 113.20L13.34 115.28M24.00 100.00L12.00 100.00M25.15 86.80L13.34 84.72M28.58 74.01L17.31 69.90M34.18 62.00L23.79 56.00M41.78 51.15L32.59 43.43M51.15 41.78L43.43 32.59M62.00 34.18L56.00 23.79M74.01 28.58L69.90 17.31M86.80 25.15L84.72 13.34" stroke-width="2" stroke-linecap="round"/><path d="M100.00 26.00L100.00 10.00M174.00 100.00L190.00 100.00M100.00 174.00L100.00 190.00M26.00 100.00L10.00 100.00" stroke-width="4" stroke-linecap="round"/></g><circle cx="100" cy="93" r="11" fill="currentColor"/><path d="M94 99h12l3.5 22h-19z" fill="currentColor"/></svg>
+      <p class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>سياسة الخصوصية</p>
+      <h1>Souro Vault <span class="accent">Go</span></h1>
+      <p class="lede">Souro Vault Go خزنة خاصة تعمل على هاتفك، ويُموَّل بالإعلانات. إليك بالضبط ما يبقى على هاتفك، وما يتلقاه الشركاء الإعلانيون.</p>
+      <ul class="chips"><li><svg class="i" aria-hidden="true"><use href="#i-megaphone"/></svg>مجاني مع إعلانات</li><li><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>الخزنة تبقى على هاتفك</li><li><svg class="i" aria-hidden="true"><use href="#i-toggle"/></svg>يمكن إيقاف الإعلانات</li></ul>
+      <dl class="facts"><div><dt>تاريخ السريان</dt><dd>1 نوفمبر 2026</dd></div><div><dt>التطبيق</dt><dd>Souro Vault Go لنظام Android</dd></div><div><dt>الحزمة</dt><dd><code>com.souro.multi_vault.free</code></dd></div><div><dt>المطوّر</dt><dd>SouroApps</dd></div><div><dt>التواصل</dt><dd><a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a></dd></div></dl>
+      <p class="tr-note"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><span>هذه ترجمة. إذا اختلفت عن النسخة الإنجليزية، فالنسخة الإنجليزية هي المعتمدة. <a href="index.html?lang=en" data-lang="en">English</a></span></p>
+    </div>
+  </section>
+  <div class="wrap layout">
+    <nav class="toc" aria-label="المحتويات">
+      <details open>
+        <summary>المحتويات<svg class="i" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+        <ol>
+        <li><a href="#summary">ملخص</a></li>
+        <li><a href="#who">الجهة المسؤولة</a></li>
+        <li><a href="#on-your-phone">ما يتعامل معه التطبيق على هاتفك</a></li>
+        <li><a href="#what-we-collect">ما نجمعه</a></li>
+        <li><a href="#advertising">الإعلانات</a></li>
+        <li><a href="#permissions">الأذونات التي يطلبها التطبيق</a></li>
+        <li><a href="#purchases">المشتريات</a></li>
+        <li><a href="#leaving-the-vault">متى تغادر البيانات الخزنة</a></li>
+        <li><a href="#security">الأمان</a></li>
+        <li><a href="#retention">مدة الاحتفاظ بالبيانات</a></li>
+        <li><a href="#children">الأطفال</a></li>
+        <li><a href="#rights">حقوقك</a></li>
+        <li><a href="#changes">التغييرات على هذه السياسة</a></li>
+        <li><a href="#contact">التواصل</a></li>
+        </ol>
+      </details>
+    </nav>
+    <article class="policy" id="policy" tabindex="-1">
+<section id="summary" aria-labelledby="summary-h">
+  <h2 id="summary-h"><span class="num" aria-hidden="true">1</span><span>ملخص</span><a class="anchor" href="#summary" aria-label="رابط إلى القسم 1">#</a></h2>
+<p class="intro">Souro Vault Go خزنة خاصة تعمل على هاتفك، ويُموَّل بالإعلانات.</p>
+<div class="glance">
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-lock"></use></svg></span>
+<h3>ما تضعه في الخزنة لا يغادر هاتفك أبدًا</h3>
+<p>يُشفَّر على الهاتف بمفاتيح محمية برمز PIN الخاص بك وبالعتاد الآمن في هاتفك. لا يمكننا رؤيته أو استعادته أو إعادة تعيين رمز PIN. لا يوجد حساب ولا تسجيل دخول.</p>
+</article>
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-cloud-off"></use></svg></span>
+<h3>لا خوادم، ولا أدوات تحليل خاصة بنا</h3>
+<p>لا نشغّل أي خوادم تتلقى بياناتك، وليس للتطبيق أدوات تحليل خاصة به.</p>
+</article>
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-megaphone"></use></svg></span>
+<h3>الإعلانات تأتي من شركاء إعلانيين</h3>
+<p>لعرض الإعلانات، يتلقى هؤلاء الشركاء بعض المعلومات عن جهازك وعن كيفية استخدام الإعلانات (<a href="#advertising">القسم 5</a>). ولا يتلقون أبدًا محتوى خزنتك أو رمز PIN أو ملفاتك أو ملاحظاتك أو جهات اتصالك.</p>
+</article>
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-toggle"></use></svg></span>
+<h3>يمكنك إيقاف الإعلانات</h3>
+<p>اشترِ „بلا إعلانات“ أو Pro عبر Google Play. عندها لا يرسل التطبيق أي طلبات إعلانية ولا يشغّل البرمجيات الإعلانية. وحيث يشترط القانون ذلك، يُطلب منك الموافقة قبل عرض الإعلانات المخصّصة.</p>
+</article>
+</div>
+</section>
+<section id="who" aria-labelledby="who-h">
+  <h2 id="who-h"><span class="num" aria-hidden="true">2</span><span>الجهة المسؤولة</span><a class="anchor" href="#who" aria-label="رابط إلى القسم 2">#</a></h2>
+<p>ينشر هذا التطبيقَ SouroApps („نحن“). لأي سؤال حول هذه السياسة أو بياناتك، راسلنا على <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a>.</p>
+</section>
+<section id="on-your-phone" aria-labelledby="on-your-phone-h">
+  <h2 id="on-your-phone-h"><span class="num" aria-hidden="true">3</span><span>ما يتعامل معه التطبيق على هاتفك</span><a class="anchor" href="#on-your-phone" aria-label="رابط إلى القسم 3">#</a></h2>
+<p>كل ما يرد هنا يبقى على هاتفك، في مساحة التخزين الخاصة بالتطبيق، ما لم تنقله أنت بنفسك (<a href="#leaving-the-vault">القسم 8</a>).</p>
+<h3><span class="sub">3.1</span>ما تضعه في الخزنة</h3>
+<ul class="dots">
+<li>الصور ومقاطع الفيديو والصوت والمستندات والملفات الأخرى التي تضيفها.</li>
+<li>الملاحظات الخاصة وجهات الاتصال الخاصة (الاسم، رقم الهاتف، البريد الإلكتروني، ملاحظة، صورة)، والمذكرات الصوتية أو المرئية التي تسجّلها في التطبيق.</li>
+<li>أسماؤها وألبوماتها وتواريخها.</li>
+</ul>
+<p>يُشفَّر كل ذلك باستخدام AES-256-GCM. تُشفَّر الملفات أثناء كتابتها، ولا يحتفظ التطبيق أبدًا بنسخة غير مشفّرة من أي ملف. أما الاستثناءات القليلة قصيرة الأمد فتُحذف عند قفل الخزنة: مستند مفتوح في عارض PDF، ومقطع فيديو أثناء تسجيله، وملف تختار فتحه في تطبيق آخر.</p>
+<h3><span class="sub">3.2</span>رمز PIN والقياسات الحيوية</h3>
+<ul class="dots">
+<li><strong>لا يُخزَّن رمز PIN أبدًا</strong>، ولا حتى بصيغة مموّهة. يُستخدم فقط لحظة كتابته، لفتح مفاتيح خزنتك.</li>
+<li><strong>الفتح بالقياسات الحيوية</strong> يتولاه Android بالكامل. لا يتلقى التطبيق أبدًا بيانات بصمتك أو وجهك؛ يكتفي Android بإبلاغه ما إذا تم التعرّف عليك.</li>
+</ul>
+<h3><span class="sub">3.3</span>البحث والذكاء الاصطناعي على الجهاز</h3>
+<ul class="dots">
+<li>يستخدم البحث في المحتوى نماذج Google ML Kit <strong>المدمجة في التطبيق</strong>. تفحص هذه النماذج صور خزنتك وملفات PDF والملفات النصية على الهاتف؛ لا يُنزَّل أو يُرسَل أي شيء، وتقارير الاستخدام الخاصة بالمكتبة معطّلة. تُخزَّن النتائج مشفّرة.</li>
+<li>البحث في الهاتف („هذا الجهاز“) يقرأ وسائط الهاتف والمجلدات التي تختارها على الهاتف نفسه، ويحتفظ بالنتائج في الذاكرة فقط.</li>
+</ul>
+<h3><span class="sub">3.4</span>صور المتطفلين وسجل المحاولات (معطّلة افتراضيًا)</h3>
+<ul class="dots">
+<li>إذا فعّلت صور المتطفلين، تُلتقط صورة بالكاميرا الأمامية بعد عدة محاولات خاطئة لرمز PIN (ثلاث افتراضيًا). تُشفَّر الصورة ولا تظهر إلا داخل خزنتك.</li>
+<li>يسجّل سجل المحاولات متى وأين وكم رقمًا كُتب – دون الأرقام نفسها أبدًا.</li>
+<li>لا يُرفع أي شيء.</li>
+</ul>
+<h3><span class="sub">3.5</span>الأدوات اليومية (الآلة الحاسبة، المفكرة، المعرض، مشغّل الموسيقى)</h3>
+<ul class="dots">
+<li>تعرض هذه الأدوات صور الهاتف ومقاطع الفيديو والموسيقى وتشغّلها على الهاتف.</li>
+<li>ما تفعله فيها <strong>خارج</strong> الخزنة يُخزَّن مثل بيانات أي تطبيق عادي، <strong>دون تشفير</strong>: ملاحظات المفكرة، وسجل الآلة الحاسبة، ومفضّلة المعرض والموسيقى.</li>
+<li>العناصر التي تنقلها إلى الخزنة من هذه الأدوات تُشفَّر مثل كل شيء آخر فيها.</li>
+</ul>
+<h3><span class="sub">3.6</span>الإعدادات وحالة التطبيق</h3>
+<ul class="dots">
+<li>إعداداتك. ما قد يكشف منها الأداة التي يفتح بها التطبيق يُموَّه بمفتاح محفوظ في العتاد.</li>
+<li>خطتك (مجانية، أو بلا إعلانات، أو Pro).</li>
+<li>عدّادات لتوقيت العروض والإعلانات: مثل وقت عرض آخر إعلان بملء الشاشة، وعدد الإعلانات ذات المكافأة التي شاهدتها اليوم، وعدد الأيام التي استخدمت فيها التطبيق.</li>
+</ul>
+<p>يبقى كل ذلك على الهاتف.</p>
+</section>
+<section id="what-we-collect" aria-labelledby="what-we-collect-h">
+  <h2 id="what-we-collect-h"><span class="num" aria-hidden="true">4</span><span>ما نجمعه</span><a class="anchor" href="#what-we-collect" aria-label="رابط إلى القسم 4">#</a></h2>
+<div class="callout">
+<svg class="i" aria-hidden="true"><use href="#i-eye-off"></use></svg>
+<div>
+<p><strong>نحن – المطوّر – لا نجمع بيانات شخصية.</strong> ليست لدينا خوادم تتلقى معلومات من التطبيق، ولا نبيع معلوماتك.</p>
+<p>المعلومات الموضّحة في القسم 5 يجمعها الشركاء الإعلانيون مباشرة من التطبيق، لعرض الإعلانات.</p>
+</div>
+</div>
+</section>
+<section id="advertising" aria-labelledby="advertising-h">
+  <h2 id="advertising-h"><span class="num" aria-hidden="true">5</span><span>الإعلانات</span><a class="anchor" href="#advertising" aria-label="رابط إلى القسم 5">#</a></h2>
+<h3><span class="sub">5.1</span>ما يتلقاه الشركاء الإعلانيون</h3>
+<p>عند عرض الإعلانات على مستخدمي النسخة المجانية، قد تجمع البرمجيات الإعلانية في التطبيق (وشبكات الإعلانات التي تعمل معها):</p>
+<ul class="dots">
+<li><strong>معرّفات الجهاز:</strong> معرّف الإعلانات في Android، ومعرّف مجموعة التطبيقات، ومعرّفات مشابهة.</li>
+<li><strong>عنوان IP الخاص بك</strong>، وموقعًا تقريبيًا مستنتجًا منه (على مستوى الدولة أو المدينة – لا يملك التطبيق إذن الموقع ولا يقرأ GPS أبدًا).</li>
+<li><strong>معلومات الجهاز والتطبيق:</strong> طراز الهاتف، وإصدار Android، واللغة، وحجم الشاشة، ونوع الشبكة، واسم هذا التطبيق وإصداره.</li>
+<li><strong>التفاعل مع الإعلانات:</strong> الإعلانات التي عُرضت أو شوهدت أو نُقر عليها أو شوهدت حتى النهاية.</li>
+<li><strong>بيانات التشخيص:</strong> معلومات عن أداء البرمجيات الإعلانية، مثل أوقات التحميل والأخطاء.</li>
+</ul>
+<p>يستخدمون هذه المعلومات لاختيار الإعلانات وعرضها، وقياسها، والحد من عدد مرات رؤيتك للإعلان نفسه، ومنع الاحتيال. وبحسب اختياراتك (القسم 5.3)، قد تُخصَّص الإعلانات وفق اهتماماتك.</p>
+<div class="never">
+<p class="never-title"><span class="badge"><svg class="i" aria-hidden="true"><use href="#i-x"></use></svg></span>لا يتلقى الشركاء الإعلانيون أبدًا</p>
+<ul class="pills">
+<li>أي شيء في خزنتك</li>
+<li>رمز PIN</li>
+<li>ملفاتك وصورك</li>
+<li>ملاحظاتك</li>
+<li>جهات اتصالك</li>
+<li>تسجيلاتك</li>
+<li>كلمات بحثك</li>
+<li>أي شيء من الآلة الحاسبة أو المفكرة أو المعرض أو مشغّل الموسيقى</li>
+</ul>
+</div>
+<h3><span class="sub">5.2</span>شركاؤنا الإعلانيون</h3>
+<p>يدير التطبيق إعلاناته عبر <strong>AppLovin MAX</strong>. لكل إعلان، تختار MAX أي شبكة من الشبكات أدناه تعرضه. يتعامل كل شريك مع البيانات وفق سياسة الخصوصية الخاصة به.</p>
+<ul class="partners">
+<!-- PARTNER: AppLovin MAX -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">A</span>
+<div><span class="partner-name">AppLovin MAX</span><span class="partner-role">وساطة إعلانية، وإعلانات AppLovin الخاصة</span></div>
+</div>
+<div class="partner-links">
+<a href="https://legal.applovin.com/privacy/" rel="noopener" target="_blank">سياسة الخصوصية<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+<a href="https://dash.applovin.com/p/how-applovin-shows-you-ads" rel="noopener" target="_blank">خيارات الإعلانات<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: InMobi -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">I</span>
+<div><span class="partner-name">InMobi</span><span class="partner-role">شبكة إعلانية</span></div>
+</div>
+<div class="partner-links">
+<a href="https://advertising.inmobi.com/privacy-policy" rel="noopener" target="_blank">سياسة الخصوصية<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+<a href="https://advertising.inmobi.com/page/opt-out/" rel="noopener" target="_blank">إلغاء الاشتراك<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Meta Audience Network -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">M</span>
+<div><span class="partner-name">Meta Audience Network</span><span class="partner-role">شبكة إعلانية</span></div>
+</div>
+<div class="partner-links">
+<a href="https://www.facebook.com/privacy/policy/" rel="noopener" target="_blank">سياسة الخصوصية<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Liftoff Monetize (Vungle) -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">L</span>
+<div><span class="partner-name">Liftoff Monetize</span><span class="partner-role">شبكة إعلانية (Vungle سابقًا)</span></div>
+</div>
+<div class="partner-links">
+<a href="https://liftoff.ai/privacy-policy/" rel="noopener" target="_blank">سياسة الخصوصية<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Mintegral -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">M</span>
+<div><span class="partner-name">Mintegral</span><span class="partner-role">شبكة إعلانية</span></div>
+</div>
+<div class="partner-links">
+<a href="https://www.mintegral.com/en/privacy" rel="noopener" target="_blank">سياسة الخصوصية<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Yandex Ads -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">Y</span>
+<div><span class="partner-name">Yandex Ads</span><span class="partner-role">شبكة إعلانية (Yandex Mobile Ads)</span></div>
+</div>
+<span class="tag">روسيا ودول رابطة الدول المستقلة أساسًا</span>
+<div class="partner-links">
+<a href="https://yandex.com/legal/international_ads_privacy" rel="noopener" target="_blank">سياسة الخصوصية<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+<a href="https://yandex.com/legal/confidential/" rel="noopener" target="_blank">خصوصية Yandex<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+</ul>
+<p class="note">لا تعرض كل شبكة إعلانات في كل دولة. إذا أضفنا شريكًا أو أزلناه، نحدّث هذه القائمة قبل إصدار تلك النسخة من التطبيق.</p>
+<h3><span class="sub">5.3</span>خياراتك</h3>
+<ul class="choices">
+<li>
+<strong>الموافقة</strong>
+<p>حيث يشترط قانون بلدك ذلك، يطلب التطبيق موافقتك قبل عرض الإعلانات المخصّصة. إذا سألك التطبيق، يمكنك تغيير اختيارك في أي وقت من الإعدادات › إعدادات خصوصية الإعلانات.</p>
+</li>
+<li>
+<strong>معرّف الإعلانات</strong>
+<p>من إعدادات هاتفك (الإعدادات › الخصوصية › الإعلانات، أو Google › الإعلانات) يمكنك إعادة تعيين معرّف الإعلانات أو حذفه. عندها لا يستطيع الشركاء ربط الإعلانات به.</p>
+</li>
+<li>
+<strong>بلا إعلانات إطلاقًا</strong>
+<p>اشترِ „بلا إعلانات“ أو Pro (<a href="#purchases">القسم 7</a>). عندها لا يرسل التطبيق أي طلبات إعلانية.</p>
+</li>
+<li>
+<strong>عدم وجود اتصال</strong>
+<p>يتحقق التطبيق مما إذا كان الهاتف متصلًا، كي لا يُعرض أو يُقترح إعلان لا يمكن تحميله. ويبقى هذا التحقق على الهاتف.</p>
+</li>
+</ul>
+<p><strong>أين تظهر الإعلانات.</strong></p>
+<div class="split">
+<div class="yes">
+<h4><svg class="i" aria-hidden="true"><use href="#i-check"></use></svg>قد تظهر الإعلانات</h4>
+<ul>
+<li>حيث تتصفح قوائمك</li>
+<li>على الشاشة الرئيسية للخزنة</li>
+<li>في فترات التوقف الطبيعية</li>
+<li>عندما تختار مشاهدة إعلان مقابل مكافأة</li>
+</ul>
+</div>
+<div class="no">
+<h4><svg class="i" aria-hidden="true"><use href="#i-x"></use></svg>لا تظهر الإعلانات أبدًا</h4>
+<ul>
+<li>على شاشة رمز PIN</li>
+<li>في عارض الصور والفيديو</li>
+<li>في المشغّلات أو المحرّرات أو الكاميرا أو المسجّل</li>
+<li>في الإعدادات</li>
+<li>على شاشة النسخ الاحتياطي</li>
+</ul>
+</div>
+</div>
+<h3><span class="sub">5.4</span>أين تُعالَج المعلومات</h3>
+<p>يقع مقر شركائنا الإعلانيين في عدة دول – مثل الولايات المتحدة والهند والصين والإمارات العربية المتحدة – وقد يعالجون المعلومات في دول أخرى أيضًا. وتذكر Yandex أن المعلومات التي تجمعها قد تُنقل إلى روسيا. قد لا تحمي هذه الدول البيانات الشخصية بالطريقة نفسها التي يحميها بها بلدك. ويصف كل شريك ضماناته في سياسة الخصوصية الخاصة به (القسم 5.2).</p>
+<h3><span class="sub">5.5</span>الأسس القانونية</h3>
+<p>حيث يطلب قانون مثل اللائحة العامة لحماية البيانات (GDPR) في الاتحاد الأوروبي أو المملكة المتحدة أساسًا قانونيًا:</p>
+<ul class="dots">
+<li>الإعلانات المخصّصة، وتخزين المعرّفات أو قراءتها على جهازك لأغراض الإعلان، تستند إلى <strong>موافقتك</strong>.</li>
+<li>الإعلانات غير المخصّصة وقياس الإعلانات ومنع الاحتيال تستند إلى <strong>المصلحة المشروعة</strong> لنا ولشركائنا في تمويل تطبيق مجاني والحفاظ على نزاهة الإعلانات.</li>
+</ul>
+<p>يمكنك سحب موافقتك في أي وقت (القسم 5.3).</p>
+<h3><span class="sub">5.6</span>„المشاركة“ والإعلانات الموجّهة</h3>
+<p>بموجب بعض القوانين – مثل قوانين كاليفورنيا وولايات أمريكية أخرى – قد تُعدّ مشاركة معرّفات الجهاز مع الشركاء الإعلانيين لأغراض الإعلانات المخصّصة „مشاركةً“ لأغراض الإعلانات السلوكية عبر السياقات، أو „إعلانات موجّهة“. يمكنك الانسحاب بحذف معرّف الإعلانات أو إعادة تعيينه (القسم 5.3)، أو برفض الإعلانات المخصّصة حيث يتيح التطبيق ذلك، أو بمراسلتنا. نحن لا نبيع المعلومات الشخصية مقابل المال.</p>
+</section>
+<section id="permissions" aria-labelledby="permissions-h">
+  <h2 id="permissions-h"><span class="num" aria-hidden="true">6</span><span>الأذونات التي يطلبها التطبيق</span><a class="anchor" href="#permissions" aria-label="رابط إلى القسم 6">#</a></h2>
+<p>يُطلب كل إذن فقط عندما تستخدم الميزة التي تحتاجه. الرفض يعطّل تلك الميزة فقط.</p>
+<div class="table-wrap">
+<table class="stack">
+<thead><tr><th scope="col">الإذن</th><th scope="col">السبب</th></tr></thead>
+<tbody>
+<tr><td>الإنترنت، حالة الشبكة</td><td>تحميل الإعلانات ونموذج الموافقة على الإعلانات؛ والتحقق مما إذا كان يمكن تحميل إعلان. لا يُرسَل أي شيء من خزنتك أبدًا</td></tr>
+<tr><td>معرّف الإعلانات</td><td>يستخدمه الشركاء الإعلانيون للإعلانات (القسم 5)</td></tr>
+<tr><td>الكاميرا</td><td>الصور ومقاطع الفيديو مباشرة إلى الخزنة؛ المذكرات المرئية؛ صور المتطفلين (إذا فعّلتها)</td></tr>
+<tr><td>الميكروفون</td><td>المذكرات الصوتية والمرئية التي تسجّلها بنفسك. لا يعمل أبدًا في الخلفية ولا أثناء المكالمات</td></tr>
+<tr><td>الصور ومقاطع الفيديو (والتخزين في Android 12 والإصدارات الأقدم)</td><td>أداة المعرض؛ الاستيراد التلقائي (إذا فعّلته)؛ البحث في الهاتف. إضافة الملفات تتم عبر أداة الاختيار الخاصة بـ Android ولا تحتاج إلى إذن</td></tr>
+<tr><td>الموسيقى والصوت</td><td>أداة مشغّل الموسيقى؛ البحث في الهاتف</td></tr>
+<tr><td>جهات الاتصال</td><td>فقط إذا استوردت عدة جهات اتصال من الهاتف دفعة واحدة</td></tr>
+<tr><td>الإشعارات</td><td>تقدّم الاستيراد، وعناصر التحكم في الموسيقى، واقتراحات استيراد الملفات الجديدة</td></tr>
+<tr><td>القياسات الحيوية</td><td>الفتح بالبصمة أو بالوجه</td></tr>
+<tr><td>خدمة في المقدّمة، إبقاء الجهاز نشطًا، التشغيل عند بدء التشغيل</td><td>إنهاء عمليات الاستيراد الكبيرة وتشغيل الموسيقى في الخلفية؛ واستئناف الاستيراد التلقائي بعد إعادة التشغيل</td></tr>
+<tr><td>الاهتزاز</td><td>لمسات المفاتيح والاستجابة اللمسية</td></tr>
+<tr><td>الفوترة عبر Google Play</td><td>شراء „بلا إعلانات“ أو Pro</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>لا</strong> يطلب التطبيق الوصول إلى الموقع أو الرسائل النصية أو سجل المكالمات أو المكالمات الهاتفية أو الحسابات أو „جميع الملفات“.</p>
+</section>
+<section id="purchases" aria-labelledby="purchases-h">
+  <h2 id="purchases-h"><span class="num" aria-hidden="true">7</span><span>المشتريات</span><a class="anchor" href="#purchases" aria-label="رابط إلى القسم 7">#</a></h2>
+<ul class="dots">
+<li>يُشترى „بلا إعلانات“ وPro عبر <strong>Google Play</strong>، وفق شروط Google و<a href="https://policies.google.com/privacy" rel="noopener" target="_blank">سياسة الخصوصية</a> الخاصة بها. لا نرى أبدًا تفاصيل الدفع الخاصة بك.</li>
+<li>يتلقى التطبيق تأكيد Google Play لما اشتراه حساب Google هذا، ويتحقق منه على الهاتف، ويتذكر خطتك.</li>
+<li>أدِر الاشتراكات أو ألغِها من Google Play › المدفوعات والاشتراكات.</li>
+</ul>
+</section>
+<section id="leaving-the-vault" aria-labelledby="leaving-the-vault-h">
+  <h2 id="leaving-the-vault-h"><span class="num" aria-hidden="true">8</span><span>متى تغادر البيانات الخزنة – فقط عندما تفعل ذلك أنت</span><a class="anchor" href="#leaving-the-vault" aria-label="رابط إلى القسم 8">#</a></h2>
+<p>لا تغادر البيانات الخزنة إلا عبر إجراءات تقوم بها أنت:</p>
+<ul class="actions">
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-share"></use></svg></span><p><strong>مشاركة</strong> عنصر مع تطبيق آخر.</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-restore"></use></svg></span><p><strong>استعادة</strong> العناصر إلى التخزين العادي في الهاتف. وعندها لا تعود مشفّرة.</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-open"></use></svg></span><p><strong>الفتح باستخدام</strong> تطبيق آخر. تُنشأ نسخة مؤقتة لذلك التطبيق وتُحذف عند قفل الخزنة.</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-archive"></use></svg></span><p><strong>نسخة احتياطية مشفّرة:</strong> ملف يُحفظ في المكان الذي تختاره، مشفّر بعبارة مرور لا يعرفها سواك.</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-user"></use></svg></span><p><strong>تصدير جهات الاتصال</strong> كملف ‎.vcf. هذا الملف غير مشفّر، ويحذّرك التطبيق مسبقًا.</p></li>
+</ul>
+<p>تحتفظ الملفات بالمعلومات التي تحتويها أصلًا (مثل تاريخ الصورة أو وسوم الموقع) عند مشاركتها أو استعادتها.</p>
+</section>
+<section id="security" aria-labelledby="security-h">
+  <h2 id="security-h"><span class="num" aria-hidden="true">9</span><span>الأمان</span><a class="anchor" href="#security" aria-label="رابط إلى القسم 9">#</a></h2>
+<ul class="dots">
+<li>تشفير AES-256-GCM.</li>
+<li>المفاتيح محمية برمز PIN الخاص بك وبالعتاد الآمن في هاتفك (Android Keystore).</li>
+<li>لا يمكن التقاط لقطات شاشة لشاشات الخزنة.</li>
+<li>تُقفل الخزنة عند إطفاء الشاشة، وكذلك عند مغادرة التطبيق ما لم تغيّر هذا الإعداد.</li>
+</ul>
+<div class="callout warn">
+<svg class="i" aria-hidden="true"><use href="#i-alert"></use></svg>
+<div>
+<p><strong>لا يوجد أمان مثالي.</strong> إذا نسيت رمز PIN، فلن يتمكن أحد – بما في ذلك نحن – من فتح الخزنة.</p>
+<p>يُحذف أصل الملف الذي نقلته إلى الخزنة بأفضل ما يسمح به Android، لكن ذاكرة الفلاش قد تحتفظ بآثار منه إلى أن تُكتب فوقها بيانات أخرى.</p>
+</div>
+</div>
+</section>
+<section id="retention" aria-labelledby="retention-h">
+  <h2 id="retention-h"><span class="num" aria-hidden="true">10</span><span>مدة الاحتفاظ بالبيانات، وحذفها</span><a class="anchor" href="#retention" aria-label="رابط إلى القسم 10">#</a></h2>
+<p><strong>على هاتفك:</strong></p>
+<ul class="dots">
+<li>يبقى كل شيء حتى تحذفه؛</li>
+<li>تنتظر العناصر المحذوفة 30 يومًا في سلة الاسترداد ما لم تُفرغها؛</li>
+<li><strong>إلغاء التثبيت يحذف جميع بيانات التطبيق، بما فيها خزنتك</strong>، لذا أنشئ نسخة احتياطية مشفّرة أولًا إذا أردت الاحتفاظ بها؛</li>
+<li>النسخ الاحتياطي السحابي في Android والنقل من هاتف إلى آخر معطّلان لهذا التطبيق.</li>
+</ul>
+<p><strong>لدى الشركاء الإعلانيين:</strong> يحتفظ كل منهم بالبيانات التي جمعها للمدة التي تذكرها سياسة الخصوصية الخاصة به. يمكنك الحد من ذلك بحذف معرّف الإعلانات، أو بمطالبة الشريك مباشرة. نحن لا نحتفظ بتلك البيانات، لذا لا يمكننا حذفها نيابةً عنهم.</p>
+</section>
+<section id="children" aria-labelledby="children-h">
+  <h2 id="children-h"><span class="num" aria-hidden="true">11</span><span>الأطفال</span><a class="anchor" href="#children" aria-label="رابط إلى القسم 11">#</a></h2>
+<p>التطبيق غير موجّه للأطفال دون 13 عامًا (أو دون الحد الأدنى للسن في بلدك). لا نجمع عن علم معلومات من الأطفال، والإعلانات في التطبيق ليست موجّهة للأطفال. إذا كنت تعتقد أن طفلًا استخدم التطبيق وتريد حذف بيانات لدى أحد الشركاء، فتواصل معنا وسنساعدك في الوصول إليه.</p>
+</section>
+<section id="rights" aria-labelledby="rights-h">
+  <h2 id="rights-h"><span class="num" aria-hidden="true">12</span><span>حقوقك</span><a class="anchor" href="#rights" aria-label="رابط إلى القسم 12">#</a></h2>
+<p>بحسب مكان إقامتك (مثلًا بموجب اللائحة العامة لحماية البيانات GDPR في الاتحاد الأوروبي أو المملكة المتحدة، أو قانون CCPA في كاليفورنيا، أو قانون حماية البيانات الشخصية الرقمية في الهند، أو القانون الاتحادي الروسي رقم 152-FZ بشأن البيانات الشخصية)، قد يحق لك:</p>
+<ul class="dots">
+<li>الوصول إلى بياناتك الشخصية أو تصحيحها أو حذفها؛</li>
+<li>الاعتراض على استخدامها أو تقييده؛</li>
+<li>سحب الموافقة؛</li>
+<li>تقديم شكوى إلى سلطة حماية البيانات.</li>
+</ul>
+<p>لا نحتفظ بأي بيانات شخصية عنك. بالنسبة للبيانات التي يحتفظ بها شريك إعلاني، استخدم الخيارات الواردة في القسم 5.3 أو تواصل مع ذلك الشريك. يسعدنا مساعدتك – راسلنا على <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a>.</p>
+</section>
+<section id="changes" aria-labelledby="changes-h">
+  <h2 id="changes-h"><span class="num" aria-hidden="true">13</span><span>التغييرات على هذه السياسة</span><a class="anchor" href="#changes" aria-label="رابط إلى القسم 13">#</a></h2>
+<p>إذا غيّر التطبيق طريقة تعامله مع البيانات – مثل إضافة شريك إعلاني جديد – فسنحدّث هذه الصفحة وتاريخ سريانها قبل إصدار تلك النسخة من التطبيق.</p>
+</section>
+<section id="contact" aria-labelledby="contact-h">
+  <h2 id="contact-h"><span class="num" aria-hidden="true">14</span><span>التواصل</span><a class="anchor" href="#contact" aria-label="رابط إلى القسم 14">#</a></h2>
+<div class="contact-card">
+<address><strong>SouroApps</strong><br/>البريد الإلكتروني: <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a></address>
+<a class="btn" href="mailto:souroapps.support@gmail.com?subject=Souro%20Vault%20Go%20privacy"><svg class="i" aria-hidden="true"><use href="#i-mail"></use></svg>راسلنا</a>
+</div>
+</section>
+
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <span>SouroApps</span>
+      <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a>
+    </div>
+    <p class="small">لا يستخدم هذا الموقع ملفات تعريف الارتباط أو أدوات التحليل أو خطوطًا خارجية. يتذكر فقط اختيارك للمظهر واللغة، في متصفحك أنت. الموقع مستضاف على GitHub Pages، وقد يسجّل GitHub عناوين IP للزوار لأغراض الأمان، كما هو موضح في <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">بيان خصوصية GitHub</a>.</p>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="العودة إلى الأعلى"><svg class="i" aria-hidden="true"><use href="#i-up"/></svg></button>
+</body>
+</html>

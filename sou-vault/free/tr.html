@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik Politikası – Souro Vault Go</title>
+<meta name="description" content="Android için Souro Vault Go gizlilik politikası: kasanız telefonunuzda şifreli kalır; reklamlar reklam ortaklarından gelir ve kapatılabilir.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d13" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gizlilik Politikası – Souro Vault Go">
+<meta property="og:description" content="Android için Souro Vault Go gizlilik politikası: kasanız telefonunuzda şifreli kalır; reklamlar reklam ortaklarından gelir ve kapatılabilir.">
+<link rel="alternate" hreflang="en" href="index.html"><link rel="alternate" hreflang="ar" href="ar.html"><link rel="alternate" hreflang="bn" href="bn.html"><link rel="alternate" hreflang="es" href="es.html"><link rel="alternate" hreflang="hi" href="hi.html"><link rel="alternate" hreflang="id" href="id.html"><link rel="alternate" hreflang="pt" href="pt.html"><link rel="alternate" hreflang="ru" href="ru.html"><link rel="alternate" hreflang="tr" href="tr.html">
+<script>(function(){var L=["en", "ar", "bn", "es", "hi", "id", "pt", "ru", "tr"],c=document.documentElement.lang,s=null;try{s=localStorage.getItem("sv-lang")}catch(e){}if(!s&&c==="en"&&!/[?&]lang=en/.test(location.search)){var n=navigator.languages||[navigator.language||""];for(var i=0;i<n.length;i++){var x=String(n[i]).toLowerCase().split("-")[0];if(x==="in")x="id";if(x==="en")break;if(L.indexOf(x)>=0){s=x;break}}}if(s&&s!==c&&L.indexOf(s)>=0)location.replace(s==="en"?"index.html":s+".html")})()</script>
+<link rel="icon" href="vault_free.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/site.css">
+<script>try{var t=localStorage.getItem("sv-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body data-app="go">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3M12 14.5v2"/></symbol><symbol id="i-cloud-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M7.4 7.5A5 5 0 0 0 7 17.5h10.5"/><path d="M20.3 16.4A4 4 0 0 0 17 9.5h-.4A6 6 0 0 0 10 5.2"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M4 10v4a1 1 0 0 0 1 1h2l7 4V5L7 9H5a1 1 0 0 0-1 1z"/><path d="M17.5 9.5a3.5 3.5 0 0 1 0 5"/><path d="M7 15l1.2 4.5"/></symbol><symbol id="i-toggle" viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="10" rx="5"/><circle cx="16.5" cy="12" r="2.8"/></symbol><symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 6.1c.5-.1.9-.1 1.4-.1 5 0 8.5 4.2 9.5 6-.4.8-1.3 2.1-2.6 3.3"/><path d="M6.3 7.5C4.4 8.8 3.1 10.6 2.5 12c1 1.8 4.5 6 9.5 6 1.6 0 3-.4 4.3-1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol><symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M8.6 16.2a5 5 0 0 1 6.8 0"/><path d="M5.2 12.7a10 10 0 0 1 4.6-2.4"/><path d="M14.5 10.4a10 10 0 0 1 4.3 2.3"/><path d="M2 9.2a15 15 0 0 1 4.6-2.8"/><path d="M10.5 5.1A15 15 0 0 1 22 9.2"/><circle cx="12" cy="19.5" r="1" fill="currentColor" stroke="none"/></symbol><symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h3"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-ext" viewBox="0 0 24 24"><path d="M8 16L16 8M9.5 8H16v6.5"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><circle cx="17.5" cy="5.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="17.5" cy="18.5" r="2.5"/><path d="M8.7 10.8l6.6-3.9M8.7 13.2l6.6 3.9"/></symbol><symbol id="i-restore" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 7.7-1.5"/></symbol><symbol id="i-open" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol><symbol id="i-archive" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1.5"/><path d="M5 9v9.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V9M10 13h4"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9.5 16.5h-19z"/><path d="M12 10v4.5M12 17.2v.1"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 6 8-6"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.4-7.5 9.5-4.3-1.1-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12.2l2.2 2.2 4.3-4.6"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol></svg>
+<a class="skip" href="#policy">Politikaya geç</a>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="tr.html"><img class="mark" src="vault_free.svg" alt="" width="32" height="32"><span class="brand-text">Souro Vault Go <span class="brand-sub">Gizlilik</span></span></a>
+    <details class="lang"><summary aria-label="Dil"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><span class="lang-name">Türkçe</span><span class="lang-code">TR</span></summary><ul><li><a href="index.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="ar.html" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li><li><a href="bn.html" hreflang="bn" lang="bn" data-lang="bn">বাংলা</a></li><li><a href="es.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="hi.html" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li><li><a href="id.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="pt.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="ru.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="tr.html" hreflang="tr" lang="tr" data-lang="tr" aria-current="true">Türkçe</a></li></ul></details>
+    <button class="theme-toggle" type="button" aria-label="Temayı değiştir"><svg class="i moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="i sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
+  </div>
+</header>
+<main id="content">
+  <section class="hero">
+    <div class="wrap">
+      <svg class="hero-dial" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor"><circle cx="100" cy="100" r="97" stroke-width="1.5"/><circle cx="100" cy="100" r="66" stroke-width="9"/><circle cx="100" cy="100" r="44" stroke-width="1.5"/><path d="M100.00 24.00L100.00 12.00M113.20 25.15L115.28 13.34M125.99 28.58L130.10 17.31M138.00 34.18L144.00 23.79M148.85 41.78L156.57 32.59M158.22 51.15L167.41 43.43M165.82 62.00L176.21 56.00M171.42 74.01L182.69 69.90M174.85 86.80L186.66 84.72M176.00 100.00L188.00 100.00M174.85 113.20L186.66 115.28M171.42 125.99L182.69 130.10M165.82 138.00L176.21 144.00M158.22 148.85L167.41 156.57M148.85 158.22L156.57 167.41M138.00 165.82L144.00 176.21M125.99 171.42L130.10 182.69M113.20 174.85L115.28 186.66M100.00 176.00L100.00 188.00M86.80 174.85L84.72 186.66M74.01 171.42L69.90 182.69M62.00 165.82L56.00 176.21M51.15 158.22L43.43 167.41M41.78 148.85L32.59 156.57M34.18 138.00L23.79 144.00M28.58 125.99L17.31 130.10M25.15 113.20L13.34 115.28M24.00 100.00L12.00 100.00M25.15 86.80L13.34 84.72M28.58 74.01L17.31 69.90M34.18 62.00L23.79 56.00M41.78 51.15L32.59 43.43M51.15 41.78L43.43 32.59M62.00 34.18L56.00 23.79M74.01 28.58L69.90 17.31M86.80 25.15L84.72 13.34" stroke-width="2" stroke-linecap="round"/><path d="M100.00 26.00L100.00 10.00M174.00 100.00L190.00 100.00M100.00 174.00L100.00 190.00M26.00 100.00L10.00 100.00" stroke-width="4" stroke-linecap="round"/></g><circle cx="100" cy="93" r="11" fill="currentColor"/><path d="M94 99h12l3.5 22h-19z" fill="currentColor"/></svg>
+      <p class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Gizlilik Politikası</p>
+      <h1>Souro Vault <span class="accent">Go</span></h1>
+      <p class="lede">Souro Vault Go, telefonunuzda çalışan ve reklamlarla finanse edilen özel bir kasadır. Telefonunuzda tam olarak neyin kaldığını ve reklam ortaklarının ne aldığını burada bulabilirsiniz.</p>
+      <ul class="chips"><li><svg class="i" aria-hidden="true"><use href="#i-megaphone"/></svg>Ücretsiz, reklamlı</li><li><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>Kasa telefonunuzda kalır</li><li><svg class="i" aria-hidden="true"><use href="#i-toggle"/></svg>Reklamlar kapatılabilir</li></ul>
+      <dl class="facts"><div><dt>Yürürlük tarihi</dt><dd>1 Kasım 2026</dd></div><div><dt>Uygulama</dt><dd>Android için Souro Vault Go</dd></div><div><dt>Paket</dt><dd><code>com.souro.multi_vault.free</code></dd></div><div><dt>Geliştirici</dt><dd>SouroApps</dd></div><div><dt>İletişim</dt><dd><a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a></dd></div></dl>
+      <p class="tr-note"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><span>Bu bir çeviridir. İngilizce sürümle farklılık olması durumunda İngilizce sürüm geçerlidir. <a href="index.html?lang=en" data-lang="en">English</a></span></p>
+    </div>
+  </section>
+  <div class="wrap layout">
+    <nav class="toc" aria-label="İçindekiler">
+      <details open>
+        <summary>İçindekiler<svg class="i" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+        <ol>
+        <li><a href="#summary">Özet</a></li>
+        <li><a href="#who">Sorumlu taraf</a></li>
+        <li><a href="#on-your-phone">Uygulamanın telefonunuzda işledikleri</a></li>
+        <li><a href="#what-we-collect">Topladıklarımız</a></li>
+        <li><a href="#advertising">Reklamlar</a></li>
+        <li><a href="#permissions">Uygulamanın istediği izinler</a></li>
+        <li><a href="#purchases">Satın almalar</a></li>
+        <li><a href="#leaving-the-vault">Veriler kasadan ne zaman çıkar</a></li>
+        <li><a href="#security">Güvenlik</a></li>
+        <li><a href="#retention">Verilerin saklanma süresi</a></li>
+        <li><a href="#children">Çocuklar</a></li>
+        <li><a href="#rights">Haklarınız</a></li>
+        <li><a href="#changes">Bu politikadaki değişiklikler</a></li>
+        <li><a href="#contact">İletişim</a></li>
+        </ol>
+      </details>
+    </nav>
+    <article class="policy" id="policy" tabindex="-1">
+<section id="summary" aria-labelledby="summary-h">
+  <h2 id="summary-h"><span class="num" aria-hidden="true">1</span><span>Özet</span><a class="anchor" href="#summary" aria-label="Bölüm bağlantısı 1">#</a></h2>
+<p class="intro">Souro Vault Go, telefonunuzda çalışan ve reklamlarla finanse edilen özel bir kasadır.</p>
+<div class="glance">
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-lock"></use></svg></span>
+<h3>Kasaya koyduklarınız telefonunuzdan asla çıkmaz</h3>
+<p>Telefonda, PIN'iniz ve telefonunuzun güvenli donanımıyla korunan anahtarlarla şifrelenir. İçeriği göremez, kurtaramaz veya PIN'inizi sıfırlayamayız. Hesap ve oturum açma yoktur.</p>
+</article>
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-cloud-off"></use></svg></span>
+<h3>Sunucu yok, kendi analizimiz yok</h3>
+<p>Verilerinizi alan hiçbir sunucu çalıştırmıyoruz ve uygulamanın kendi analiz aracı yoktur.</p>
+</article>
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-megaphone"></use></svg></span>
+<h3>Reklamlar reklam ortaklarından gelir</h3>
+<p>Reklam göstermek için bu ortaklar cihazınız ve reklamların nasıl kullanıldığı hakkında bazı bilgiler alır (<a href="#advertising">bölüm 5</a>). Kasanızın içeriğini, PIN'inizi, dosyalarınızı, notlarınızı veya kişilerinizi asla almazlar.</p>
+</article>
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-toggle"></use></svg></span>
+<h3>Reklamları kapatabilirsiniz</h3>
+<p>Google Play üzerinden “Reklamsız” veya Pro satın alın. Bu durumda uygulama reklam isteği yapmaz ve reklam yazılımını başlatmaz. Yasanın gerektirdiği yerlerde, kişiselleştirilmiş reklamlar gösterilmeden önce onayınız istenir.</p>
+</article>
+</div>
+</section>
+<section id="who" aria-labelledby="who-h">
+  <h2 id="who-h"><span class="num" aria-hidden="true">2</span><span>Sorumlu taraf</span><a class="anchor" href="#who" aria-label="Bölüm bağlantısı 2">#</a></h2>
+<p>Bu uygulama SouroApps (“biz”) tarafından yayınlanmaktadır. Bu politika veya verileriniz hakkındaki her soru için <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a> adresine yazın.</p>
+</section>
+<section id="on-your-phone" aria-labelledby="on-your-phone-h">
+  <h2 id="on-your-phone-h"><span class="num" aria-hidden="true">3</span><span>Uygulamanın telefonunuzda işledikleri</span><a class="anchor" href="#on-your-phone" aria-label="Bölüm bağlantısı 3">#</a></h2>
+<p>Buradaki her şey, siz kendiniz dışarı taşımadıkça telefonunuzda, uygulamanın özel depolama alanında kalır (<a href="#leaving-the-vault">bölüm 8</a>).</p>
+<h3><span class="sub">3.1</span>Kasaya koydukların</h3>
+<ul class="dots">
+<li>Eklediğiniz fotoğraflar, videolar, sesler, belgeler ve diğer dosyalar.</li>
+<li>Uygulamada kaydettiğiniz özel notlar, özel kişiler (ad, telefon numarası, e-posta, not, fotoğraf) ve sesli veya görüntülü notlar.</li>
+<li>Bunların adları, albümleri ve tarihleri.</li>
+</ul>
+<p>Bunların tümü AES-256-GCM ile şifrelenir. Dosyalar yazılırken şifrelenir ve uygulama bir dosyanın şifrelenmemiş kopyasını asla saklamaz. Kısa ömürlü birkaç istisna kasa kilitlendiğinde silinir: PDF görüntüleyicide açık bir belge, kaydedilmekte olan bir video ve başka bir uygulamada açmayı seçtiğiniz bir dosya.</p>
+<h3><span class="sub">3.2</span>PIN'iniz ve biyometri</h3>
+<ul class="dots">
+<li><strong>PIN'iniz asla saklanmaz</strong>, karıştırılmış biçimde bile. Yalnızca yazdığınız anda, kasanızın anahtarlarını açmak için kullanılır.</li>
+<li><strong>Biyometrik kilit açma</strong> tamamen Android tarafından yürütülür. Uygulama parmak izi veya yüz verilerinizi asla almaz; Android yalnızca tanınıp tanınmadığınızı bildirir.</li>
+</ul>
+<h3><span class="sub">3.3</span>Arama ve cihaz üzerinde yapay zekâ</h3>
+<ul class="dots">
+<li>İçerik araması <strong>uygulamaya gömülü</strong> Google ML Kit modellerini kullanır. Bu modeller kasanızdaki fotoğrafları, PDF'leri ve metin dosyalarını telefonda inceler; hiçbir şey indirilmez veya gönderilmez ve kütüphanenin kendi kullanım raporları kapalıdır. Sonuçlar şifreli olarak saklanır.</li>
+<li>Telefonda arama (“Bu cihaz”), telefonun kendi medyasını ve seçtiğiniz klasörleri telefonda okur ve sonuçları yalnızca bellekte tutar.</li>
+</ul>
+<h3><span class="sub">3.4</span>Davetsiz misafir fotoğrafları ve deneme kaydı (varsayılan olarak kapalı)</h3>
+<ul class="dots">
+<li>Davetsiz misafir fotoğraflarını açarsanız, birkaç yanlış PIN'den sonra (varsayılan olarak üç) ön kamerayla fotoğraf çekilir. Fotoğraf şifrelenir ve yalnızca kasanızın içinde görünür.</li>
+<li>Deneme kaydı ne zaman, nerede ve kaç hane yazıldığını kaydeder – rakamların kendisini asla.</li>
+<li>Hiçbir şey yüklenmez.</li>
+</ul>
+<h3><span class="sub">3.5</span>Günlük araçlar (hesap makinesi, not defteri, galeri, müzik çalar)</h3>
+<ul class="dots">
+<li>Bu araçlar telefonun kendi fotoğraflarını, videolarını ve müziklerini telefonda gösterir ve oynatır.</li>
+<li>Bu araçlarda kasanın <strong>dışında</strong> yaptıklarınız, sıradan bir uygulamanın verileri gibi <strong>şifrelenmeden</strong> saklanır: not defteri notları, hesap makinesi geçmişi, galeri ve müzik favorileri.</li>
+<li>Bu araçlardan kasaya taşıdığınız öğeler, kasadaki diğer her şey gibi şifrelenir.</li>
+</ul>
+<h3><span class="sub">3.6</span>Ayarlar ve uygulama durumu</h3>
+<ul class="dots">
+<li>Ayarlarınız. Uygulamanın hangi araç olarak açıldığını ele verebilecek olanlar, donanımda tutulan bir anahtarla karıştırılır.</li>
+<li>Planınız (ücretsiz, Reklamsız veya Pro).</li>
+<li>Teklifleri ve reklamları zamanlayan sayaçlar: örneğin son tam ekran reklamın ne zaman gösterildiği, bugün kaç ödüllü reklam izlediğiniz ve uygulamayı kaç gündür kullandığınız.</li>
+</ul>
+<p>Bunların tümü telefonda kalır.</p>
+</section>
+<section id="what-we-collect" aria-labelledby="what-we-collect-h">
+  <h2 id="what-we-collect-h"><span class="num" aria-hidden="true">4</span><span>Topladıklarımız</span><a class="anchor" href="#what-we-collect" aria-label="Bölüm bağlantısı 4">#</a></h2>
+<div class="callout">
+<svg class="i" aria-hidden="true"><use href="#i-eye-off"></use></svg>
+<div>
+<p><strong>Biz – geliştirici olarak – kişisel veri toplamayız.</strong> Uygulamadan bilgi alan sunucularımız yoktur ve bilgilerinizi satmayız.</p>
+<p>Bölüm 5'te açıklanan bilgiler, reklam göstermek için reklam ortakları tarafından doğrudan uygulamadan toplanır.</p>
+</div>
+</div>
+</section>
+<section id="advertising" aria-labelledby="advertising-h">
+  <h2 id="advertising-h"><span class="num" aria-hidden="true">5</span><span>Reklamlar</span><a class="anchor" href="#advertising" aria-label="Bölüm bağlantısı 5">#</a></h2>
+<h3><span class="sub">5.1</span>Reklam ortaklarının aldıkları</h3>
+<p>Ücretsiz kullanıcılara reklam gösterildiğinde, uygulamadaki reklam yazılımı (ve birlikte çalıştığı reklam ağları) şunları toplayabilir:</p>
+<ul class="dots">
+<li><strong>Cihaz tanımlayıcıları:</strong> Android reklam kimliği, uygulama grubu kimliği ve benzeri tanımlayıcılar.</li>
+<li><strong>IP adresiniz</strong> ve buradan çıkarılan yaklaşık konum (ülke veya şehir düzeyinde – uygulamanın konum izni yoktur ve GPS'i asla okumaz).</li>
+<li><strong>Cihaz ve uygulama bilgileri:</strong> telefon modeli, Android sürümü, dil, ekran boyutu, ağ türü, bu uygulamanın adı ve sürümü.</li>
+<li><strong>Reklam etkileşimleri:</strong> hangi reklamların gösterildiği, görüntülendiği, tıklandığı veya sonuna kadar izlendiği.</li>
+<li><strong>Tanılama:</strong> reklam yazılımının performansı hakkında bilgiler, örneğin yükleme süreleri ve hatalar.</li>
+</ul>
+<p>Bu bilgileri reklamları seçmek ve göstermek, ölçmek, aynı reklamı ne sıklıkla gördüğünüzü sınırlamak ve dolandırıcılığı önlemek için kullanırlar. Seçimlerinize bağlı olarak (bölüm 5.3) reklamlar ilgi alanlarınıza göre kişiselleştirilebilir.</p>
+<div class="never">
+<p class="never-title"><span class="badge"><svg class="i" aria-hidden="true"><use href="#i-x"></use></svg></span>Reklam ortaklarının asla almadıkları</p>
+<ul class="pills">
+<li>Kasanızdaki hiçbir şey</li>
+<li>PIN'iniz</li>
+<li>Dosyalarınız ve fotoğraflarınız</li>
+<li>Notlarınız</li>
+<li>Kişileriniz</li>
+<li>Kayıtlarınız</li>
+<li>Arama kelimeleriniz</li>
+<li>Hesap makinesi, not defteri, galeri veya müzik çalardaki hiçbir şey</li>
+</ul>
+</div>
+<h3><span class="sub">5.2</span>Reklam ortaklarımız</h3>
+<p>Uygulama reklamlarını <strong>AppLovin MAX</strong> üzerinden yürütür. Her reklam için MAX, aşağıdaki ağlardan hangisinin göstereceğini seçer. Her ortak verileri kendi gizlilik politikası kapsamında işler.</p>
+<ul class="partners">
+<!-- PARTNER: AppLovin MAX -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">A</span>
+<div><span class="partner-name">AppLovin MAX</span><span class="partner-role">Reklam aracılığı ve AppLovin'in kendi reklamları</span></div>
+</div>
+<div class="partner-links">
+<a href="https://legal.applovin.com/privacy/" rel="noopener" target="_blank">Gizlilik politikası<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+<a href="https://dash.applovin.com/p/how-applovin-shows-you-ads" rel="noopener" target="_blank">Reklam tercihleri<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: InMobi -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">I</span>
+<div><span class="partner-name">InMobi</span><span class="partner-role">Reklam ağı</span></div>
+</div>
+<div class="partner-links">
+<a href="https://advertising.inmobi.com/privacy-policy" rel="noopener" target="_blank">Gizlilik politikası<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+<a href="https://advertising.inmobi.com/page/opt-out/" rel="noopener" target="_blank">Devre dışı bırak<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Meta Audience Network -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">M</span>
+<div><span class="partner-name">Meta Audience Network</span><span class="partner-role">Reklam ağı</span></div>
+</div>
+<div class="partner-links">
+<a href="https://www.facebook.com/privacy/policy/" rel="noopener" target="_blank">Gizlilik politikası<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Liftoff Monetize (Vungle) -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">L</span>
+<div><span class="partner-name">Liftoff Monetize</span><span class="partner-role">Reklam ağı (eski adıyla Vungle)</span></div>
+</div>
+<div class="partner-links">
+<a href="https://liftoff.ai/privacy-policy/" rel="noopener" target="_blank">Gizlilik politikası<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Mintegral -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">M</span>
+<div><span class="partner-name">Mintegral</span><span class="partner-role">Reklam ağı</span></div>
+</div>
+<div class="partner-links">
+<a href="https://www.mintegral.com/en/privacy" rel="noopener" target="_blank">Gizlilik politikası<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Yandex Ads -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">Y</span>
+<div><span class="partner-name">Yandex Ads</span><span class="partner-role">Reklam ağı (Yandex Mobile Ads)</span></div>
+</div>
+<span class="tag">Çoğunlukla Rusya ve BDT ülkeleri</span>
+<div class="partner-links">
+<a href="https://yandex.com/legal/international_ads_privacy" rel="noopener" target="_blank">Gizlilik politikası<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+<a href="https://yandex.com/legal/confidential/" rel="noopener" target="_blank">Yandex gizliliği<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+</ul>
+<p class="note">Her ağ her ülkede reklam göstermez. Bir ortak ekler veya çıkarırsak, uygulamanın o sürümü yayınlanmadan önce bu listeyi güncelleriz.</p>
+<h3><span class="sub">5.3</span>Seçimleriniz</h3>
+<ul class="choices">
+<li>
+<strong>Onay</strong>
+<p>Ülkenizin yasası gerektiriyorsa, uygulama kişiselleştirilmiş reklamlar gösterilmeden önce onayınızı ister. Uygulama size sorduysa, seçiminizi istediğiniz zaman Ayarlar › Reklamlar için gizlilik ayarları bölümünden değiştirebilirsiniz.</p>
+</li>
+<li>
+<strong>Reklam kimliği</strong>
+<p>Telefonunuzun ayarlarında (Ayarlar › Gizlilik › Reklamlar veya Google › Reklamlar) reklam kimliğinizi sıfırlayabilir veya silebilirsiniz. Böylece ortaklar reklamları bu kimlikle ilişkilendiremez.</p>
+</li>
+<li>
+<strong>Hiç reklam olmasın</strong>
+<p>“Reklamsız” veya Pro satın alın (<a href="#purchases">bölüm 7</a>). Bu durumda uygulama reklam isteği yapmaz.</p>
+</li>
+<li>
+<strong>Bağlantı yok</strong>
+<p>Uygulama, yüklenemeyecek bir reklamın gösterilmemesi veya önerilmemesi için telefonun çevrimiçi olup olmadığını kontrol eder. Bu kontrol telefonda kalır.</p>
+</li>
+</ul>
+<p><strong>Reklamların göründüğü yerler.</strong></p>
+<div class="split">
+<div class="yes">
+<h4><svg class="i" aria-hidden="true"><use href="#i-check"></use></svg>Reklam görünebilir</h4>
+<ul>
+<li>Listelerinize göz atarken</li>
+<li>Kasanın ana ekranında</li>
+<li>Doğal aralarda</li>
+<li>Ödül karşılığında bir reklam izlemeyi seçtiğinizde</li>
+</ul>
+</div>
+<div class="no">
+<h4><svg class="i" aria-hidden="true"><use href="#i-x"></use></svg>Reklam asla görünmez</h4>
+<ul>
+<li>PIN ekranında</li>
+<li>Fotoğraf ve video görüntüleyicide</li>
+<li>Oynatıcılarda, düzenleyicilerde, kamerada veya kaydedicide</li>
+<li>Ayarlarda</li>
+<li>Yedekleme ekranında</li>
+</ul>
+</div>
+</div>
+<h3><span class="sub">5.4</span>Bilgilerin işlendiği yerler</h3>
+<p>Reklam ortaklarımız birçok ülkede yerleşiktir – örneğin Amerika Birleşik Devletleri, Hindistan, Çin ve Birleşik Arap Emirlikleri – ve bilgileri başka ülkelerde de işleyebilir. Yandex, topladığı bilgilerin Rusya'ya aktarılabileceğini belirtmektedir. Bu ülkeler kişisel verileri yaşadığınız ülkeyle aynı şekilde korumayabilir. Her ortak, güvencelerini kendi gizlilik politikasında açıklar (bölüm 5.2).</p>
+<h3><span class="sub">5.5</span>Hukuki dayanaklar</h3>
+<p>AB veya Birleşik Krallık GDPR'si gibi bir yasanın hukuki dayanak istediği durumlarda:</p>
+<ul class="dots">
+<li>Kişiselleştirilmiş reklamlar ile reklam amacıyla cihazınızda tanımlayıcıların saklanması veya okunması, sizin <strong>onayınıza</strong> dayanır.</li>
+<li>Kişiselleştirilmemiş reklamlar, reklam ölçümü ve dolandırıcılığın önlenmesi; ücretsiz bir uygulamayı finanse etme ve reklamları dürüst tutma konusundaki bizim ve ortaklarımızın <strong>meşru menfaatine</strong> dayanır.</li>
+</ul>
+<p>Onayınızı istediğiniz zaman geri çekebilirsiniz (bölüm 5.3).</p>
+<h3><span class="sub">5.6</span>“Paylaşım” ve hedefli reklamcılık</h3>
+<p>Bazı yasalara göre – örneğin Kaliforniya ve diğer ABD eyaletlerininkiler – kişiselleştirilmiş reklamlar için cihaz tanımlayıcılarının reklam ortaklarıyla paylaşılması, bağlamlar arası davranışsal reklamcılık için “paylaşım” veya “hedefli reklamcılık” sayılabilir. Reklam kimliğinizi silerek veya sıfırlayarak (bölüm 5.3), uygulamanın bu seçeneği sunduğu yerlerde kişiselleştirilmiş reklamları reddederek ya da bize yazarak bunu reddedebilirsiniz. Kişisel bilgileri para karşılığında satmayız.</p>
+</section>
+<section id="permissions" aria-labelledby="permissions-h">
+  <h2 id="permissions-h"><span class="num" aria-hidden="true">6</span><span>Uygulamanın istediği izinler</span><a class="anchor" href="#permissions" aria-label="Bölüm bağlantısı 6">#</a></h2>
+<p>Her izin yalnızca onu gerektiren özelliği kullandığınızda istenir. Reddetmek yalnızca o özelliği kapatır.</p>
+<div class="table-wrap">
+<table class="stack">
+<thead><tr><th scope="col">İzin</th><th scope="col">Neden</th></tr></thead>
+<tbody>
+<tr><td>İnternet, ağ durumu</td><td>Reklamları ve reklam onay formunu yüklemek; bir reklamın yüklenip yüklenemeyeceğini kontrol etmek. Kasanızdan hiçbir şey asla gönderilmez</td></tr>
+<tr><td>Reklam kimliği</td><td>Reklam ortakları tarafından reklamlar için kullanılır (bölüm 5)</td></tr>
+<tr><td>Kamera</td><td>Fotoğraf ve videoları doğrudan kasaya almak; görüntülü notlar; davetsiz misafir fotoğrafları (açarsanız)</td></tr>
+<tr><td>Mikrofon</td><td>Kendi kaydettiğiniz sesli ve görüntülü notlar. Asla arka planda ve asla arama sırasında değil</td></tr>
+<tr><td>Fotoğraflar ve videolar (ve Android 12 ve öncesinde depolama)</td><td>Galeri aracı; otomatik içe aktarma (açarsanız); telefonda arama. Dosya eklemek Android'in kendi seçicisini kullanır ve izin gerektirmez</td></tr>
+<tr><td>Müzik ve ses</td><td>Müzik çalar aracı; telefonda arama</td></tr>
+<tr><td>Kişiler</td><td>Yalnızca telefondan birden çok kişiyi tek seferde içe aktarırsanız</td></tr>
+<tr><td>Bildirimler</td><td>İçe aktarma ilerlemesi, müzik kontrolleri, yeni dosyaları içe aktarma önerileri</td></tr>
+<tr><td>Biyometri</td><td>Parmak izi veya yüzle kilit açma</td></tr>
+<tr><td>Ön plan hizmeti, uyanık tutma, açılışta çalışma</td><td>Büyük içe aktarmaları bitirmek ve müziği arka planda çalmak; yeniden başlatmadan sonra otomatik içe aktarmayı yeniden başlatmak</td></tr>
+<tr><td>Titreşim</td><td>Tuş dokunuşları ve geri bildirim</td></tr>
+<tr><td>Google Play faturalandırma</td><td>“Reklamsız” veya Pro satın alma</td></tr>
+</tbody>
+</table>
+</div>
+<p>Uygulama konum, SMS, arama kayıtları, telefon aramaları, hesaplar veya “tüm dosyalar” erişimi <strong>istemez</strong>.</p>
+</section>
+<section id="purchases" aria-labelledby="purchases-h">
+  <h2 id="purchases-h"><span class="num" aria-hidden="true">7</span><span>Satın almalar</span><a class="anchor" href="#purchases" aria-label="Bölüm bağlantısı 7">#</a></h2>
+<ul class="dots">
+<li>“Reklamsız” ve Pro, Google'ın koşulları ve <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">gizlilik politikası</a> kapsamında <strong>Google Play</strong> üzerinden satın alınır. Ödeme bilgilerinizi asla görmeyiz.</li>
+<li>Uygulama, Google Play'in bu Google hesabının ne satın aldığına dair onayını alır, bunu telefonda kontrol eder ve planınızı hatırlar.</li>
+<li>Abonelikleri Google Play › Ödemeler ve abonelikler bölümünden yönetin veya iptal edin.</li>
+</ul>
+</section>
+<section id="leaving-the-vault" aria-labelledby="leaving-the-vault-h">
+  <h2 id="leaving-the-vault-h"><span class="num" aria-hidden="true">8</span><span>Veriler kasadan ne zaman çıkar – yalnızca siz çıkardığınızda</span><a class="anchor" href="#leaving-the-vault" aria-label="Bölüm bağlantısı 8">#</a></h2>
+<p>Veriler kasadan yalnızca sizin yaptığınız işlemlerle çıkar:</p>
+<ul class="actions">
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-share"></use></svg></span><p>Bir öğeyi başka bir uygulamayla <strong>paylaşma</strong>.</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-restore"></use></svg></span><p>Öğeleri telefonun normal depolama alanına <strong>geri yükleme</strong>. Bu durumda artık şifreli değildirler.</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-open"></use></svg></span><p>Başka bir uygulamayla <strong>açma</strong>. O uygulama için geçici bir kopya oluşturulur ve kasa kilitlendiğinde silinir.</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-archive"></use></svg></span><p><strong>Şifreli yedek:</strong> seçtiğiniz yere kaydedilen ve yalnızca sizin bildiğiniz bir parolayla şifrelenen bir dosya.</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-user"></use></svg></span><p>Kişileri .vcf dosyası olarak <strong>dışa aktarma</strong>. Bu dosya şifreli değildir ve uygulama sizi önceden uyarır.</p></li>
+</ul>
+<p>Dosyalar paylaşıldığında veya geri yüklendiğinde zaten içerdikleri bilgileri (örneğin bir fotoğrafın tarihi veya konum etiketleri) korur.</p>
+</section>
+<section id="security" aria-labelledby="security-h">
+  <h2 id="security-h"><span class="num" aria-hidden="true">9</span><span>Güvenlik</span><a class="anchor" href="#security" aria-label="Bölüm bağlantısı 9">#</a></h2>
+<ul class="dots">
+<li>AES-256-GCM şifreleme.</li>
+<li>Anahtarlar PIN'iniz ve telefonunuzun güvenli donanımı (Android Keystore) ile korunur.</li>
+<li>Kasa ekranlarının görüntüsü alınamaz.</li>
+<li>Kasa, ekran kapandığında ve ayarı değiştirmediğiniz sürece uygulamadan çıktığınızda kilitlenir.</li>
+</ul>
+<div class="callout warn">
+<svg class="i" aria-hidden="true"><use href="#i-alert"></use></svg>
+<div>
+<p><strong>Hiçbir güvenlik kusursuz değildir.</strong> PIN'inizi unutursanız, biz dahil hiç kimse kasayı açamaz.</p>
+<p>Kasaya taşıdığınız bir dosyanın aslının silinmesi Android'in izin verdiği en iyi şekilde yapılır, ancak flash bellek, üzerine yazılana kadar izler tutabilir.</p>
+</div>
+</div>
+</section>
+<section id="retention" aria-labelledby="retention-h">
+  <h2 id="retention-h"><span class="num" aria-hidden="true">10</span><span>Verilerin saklanma süresi ve silinmesi</span><a class="anchor" href="#retention" aria-label="Bölüm bağlantısı 10">#</a></h2>
+<p><strong>Telefonunuzda:</strong></p>
+<ul class="dots">
+<li>her şey siz silene kadar kalır;</li>
+<li>silinen öğeler, siz boşaltmadıkça kurtarma kutusunda 30 gün bekler;</li>
+<li><strong>uygulamayı kaldırmak, kasanız dahil uygulamanın tüm verilerini siler</strong>, bu yüzden saklamak istiyorsanız önce şifreli bir yedek alın;</li>
+<li>Android'in bulut yedeklemesi ve telefondan telefona aktarım bu uygulama için kapalıdır.</li>
+</ul>
+<p><strong>Reklam ortaklarında:</strong> her biri topladığı verileri kendi gizlilik politikasında belirtilen süre boyunca saklar. Reklam kimliğinizi silerek bunu sınırlayabilir veya doğrudan ortağa başvurabilirsiniz. Bu verileri biz tutmadığımız için onlar adına silemeyiz.</p>
+</section>
+<section id="children" aria-labelledby="children-h">
+  <h2 id="children-h"><span class="num" aria-hidden="true">11</span><span>Çocuklar</span><a class="anchor" href="#children" aria-label="Bölüm bağlantısı 11">#</a></h2>
+<p>Uygulama 13 yaşından küçük çocuklara (veya ülkenizdeki asgari yaşın altındakilere) yönelik değildir. Çocuklardan bilerek bilgi toplamayız ve uygulamadaki reklamlar çocuklara yönelik değildir. Bir çocuğun uygulamayı kullandığını düşünüyor ve bir ortaktan verilerin silinmesini istiyorsanız bize yazın; ortağa ulaşmanıza yardımcı olalım.</p>
+</section>
+<section id="rights" aria-labelledby="rights-h">
+  <h2 id="rights-h"><span class="num" aria-hidden="true">12</span><span>Haklarınız</span><a class="anchor" href="#rights" aria-label="Bölüm bağlantısı 12">#</a></h2>
+<p>Yaşadığınız yere bağlı olarak (örneğin AB veya Birleşik Krallık'taki GDPR, Kaliforniya'daki CCPA, Hindistan'ın Dijital Kişisel Verilerin Korunması Yasası veya Rusya'nın Kişisel Veriler hakkındaki 152-FZ sayılı Federal Kanunu kapsamında) şu haklara sahip olabilirsiniz:</p>
+<ul class="dots">
+<li>kişisel verilerinize erişme, bunları düzeltme veya silme;</li>
+<li>kullanımlarına itiraz etme veya kısıtlama;</li>
+<li>onayınızı geri çekme;</li>
+<li>bir veri koruma otoritesine şikâyette bulunma.</li>
+</ul>
+<p>Hakkınızda kişisel veri tutmuyoruz. Bir reklam ortağının elindeki veriler için bölüm 5.3'teki seçenekleri kullanın veya o ortakla iletişime geçin. Yardımcı olmaktan memnuniyet duyarız – <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a> adresine yazın.</p>
+</section>
+<section id="changes" aria-labelledby="changes-h">
+  <h2 id="changes-h"><span class="num" aria-hidden="true">13</span><span>Bu politikadaki değişiklikler</span><a class="anchor" href="#changes" aria-label="Bölüm bağlantısı 13">#</a></h2>
+<p>Uygulama verileri işleme biçimini değiştirirse – örneğin yeni bir reklam ortağı eklenirse – uygulamanın o sürümü yayınlanmadan önce bu sayfayı ve yürürlük tarihini güncelleriz.</p>
+</section>
+<section id="contact" aria-labelledby="contact-h">
+  <h2 id="contact-h"><span class="num" aria-hidden="true">14</span><span>İletişim</span><a class="anchor" href="#contact" aria-label="Bölüm bağlantısı 14">#</a></h2>
+<div class="contact-card">
+<address><strong>SouroApps</strong><br/>E-posta: <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a></address>
+<a class="btn" href="mailto:souroapps.support@gmail.com?subject=Souro%20Vault%20Go%20privacy"><svg class="i" aria-hidden="true"><use href="#i-mail"></use></svg>Bize yazın</a>
+</div>
+</section>
+
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <span>SouroApps</span>
+      <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a>
+    </div>
+    <p class="small">Bu web sitesi çerez, analiz aracı veya dış yazı tipi kullanmaz. Yalnızca tema ve dil seçiminizi kendi tarayıcınızda hatırlar. Site GitHub Pages üzerinde barındırılır; GitHub, <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Gizlilik Bildirimi</a> belgesinde açıklandığı gibi güvenlik amacıyla ziyaretçilerin IP adreslerini kaydedebilir.</p>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="Başa dön"><svg class="i" aria-hidden="true"><use href="#i-up"/></svg></button>
+</body>
+</html>

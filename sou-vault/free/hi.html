@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="hi" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>गोपनीयता नीति – Souro Vault Go</title>
+<meta name="description" content="Android के लिए Souro Vault Go की गोपनीयता नीति: आपका वॉल्ट आपके फ़ोन पर एन्क्रिप्टेड रहता है; विज्ञापन विज्ञापन भागीदारों से आते हैं और उन्हें बंद किया जा सकता है।">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d13" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="गोपनीयता नीति – Souro Vault Go">
+<meta property="og:description" content="Android के लिए Souro Vault Go की गोपनीयता नीति: आपका वॉल्ट आपके फ़ोन पर एन्क्रिप्टेड रहता है; विज्ञापन विज्ञापन भागीदारों से आते हैं और उन्हें बंद किया जा सकता है।">
+<link rel="alternate" hreflang="en" href="index.html"><link rel="alternate" hreflang="ar" href="ar.html"><link rel="alternate" hreflang="bn" href="bn.html"><link rel="alternate" hreflang="es" href="es.html"><link rel="alternate" hreflang="hi" href="hi.html"><link rel="alternate" hreflang="id" href="id.html"><link rel="alternate" hreflang="pt" href="pt.html"><link rel="alternate" hreflang="ru" href="ru.html"><link rel="alternate" hreflang="tr" href="tr.html">
+<script>(function(){var L=["en", "ar", "bn", "es", "hi", "id", "pt", "ru", "tr"],c=document.documentElement.lang,s=null;try{s=localStorage.getItem("sv-lang")}catch(e){}if(!s&&c==="en"&&!/[?&]lang=en/.test(location.search)){var n=navigator.languages||[navigator.language||""];for(var i=0;i<n.length;i++){var x=String(n[i]).toLowerCase().split("-")[0];if(x==="in")x="id";if(x==="en")break;if(L.indexOf(x)>=0){s=x;break}}}if(s&&s!==c&&L.indexOf(s)>=0)location.replace(s==="en"?"index.html":s+".html")})()</script>
+<link rel="icon" href="vault_free.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/site.css">
+<script>try{var t=localStorage.getItem("sv-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body data-app="go">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3M12 14.5v2"/></symbol><symbol id="i-cloud-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M7.4 7.5A5 5 0 0 0 7 17.5h10.5"/><path d="M20.3 16.4A4 4 0 0 0 17 9.5h-.4A6 6 0 0 0 10 5.2"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M4 10v4a1 1 0 0 0 1 1h2l7 4V5L7 9H5a1 1 0 0 0-1 1z"/><path d="M17.5 9.5a3.5 3.5 0 0 1 0 5"/><path d="M7 15l1.2 4.5"/></symbol><symbol id="i-toggle" viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="10" rx="5"/><circle cx="16.5" cy="12" r="2.8"/></symbol><symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 6.1c.5-.1.9-.1 1.4-.1 5 0 8.5 4.2 9.5 6-.4.8-1.3 2.1-2.6 3.3"/><path d="M6.3 7.5C4.4 8.8 3.1 10.6 2.5 12c1 1.8 4.5 6 9.5 6 1.6 0 3-.4 4.3-1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol><symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M8.6 16.2a5 5 0 0 1 6.8 0"/><path d="M5.2 12.7a10 10 0 0 1 4.6-2.4"/><path d="M14.5 10.4a10 10 0 0 1 4.3 2.3"/><path d="M2 9.2a15 15 0 0 1 4.6-2.8"/><path d="M10.5 5.1A15 15 0 0 1 22 9.2"/><circle cx="12" cy="19.5" r="1" fill="currentColor" stroke="none"/></symbol><symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h3"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-ext" viewBox="0 0 24 24"><path d="M8 16L16 8M9.5 8H16v6.5"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><circle cx="17.5" cy="5.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="17.5" cy="18.5" r="2.5"/><path d="M8.7 10.8l6.6-3.9M8.7 13.2l6.6 3.9"/></symbol><symbol id="i-restore" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 7.7-1.5"/></symbol><symbol id="i-open" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol><symbol id="i-archive" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1.5"/><path d="M5 9v9.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V9M10 13h4"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9.5 16.5h-19z"/><path d="M12 10v4.5M12 17.2v.1"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 6 8-6"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.4-7.5 9.5-4.3-1.1-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12.2l2.2 2.2 4.3-4.6"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol></svg>
+<a class="skip" href="#policy">नीति पर जाएँ</a>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="hi.html"><img class="mark" src="vault_free.svg" alt="" width="32" height="32"><span class="brand-text">Souro Vault Go <span class="brand-sub">गोपनीयता</span></span></a>
+    <details class="lang"><summary aria-label="भाषा"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><span class="lang-name">हिन्दी</span><span class="lang-code">HI</span></summary><ul><li><a href="index.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="ar.html" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li><li><a href="bn.html" hreflang="bn" lang="bn" data-lang="bn">বাংলা</a></li><li><a href="es.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="hi.html" hreflang="hi" lang="hi" data-lang="hi" aria-current="true">हिन्दी</a></li><li><a href="id.html" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="pt.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="ru.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="tr.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li></ul></details>
+    <button class="theme-toggle" type="button" aria-label="थीम बदलें"><svg class="i moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="i sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
+  </div>
+</header>
+<main id="content">
+  <section class="hero">
+    <div class="wrap">
+      <svg class="hero-dial" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor"><circle cx="100" cy="100" r="97" stroke-width="1.5"/><circle cx="100" cy="100" r="66" stroke-width="9"/><circle cx="100" cy="100" r="44" stroke-width="1.5"/><path d="M100.00 24.00L100.00 12.00M113.20 25.15L115.28 13.34M125.99 28.58L130.10 17.31M138.00 34.18L144.00 23.79M148.85 41.78L156.57 32.59M158.22 51.15L167.41 43.43M165.82 62.00L176.21 56.00M171.42 74.01L182.69 69.90M174.85 86.80L186.66 84.72M176.00 100.00L188.00 100.00M174.85 113.20L186.66 115.28M171.42 125.99L182.69 130.10M165.82 138.00L176.21 144.00M158.22 148.85L167.41 156.57M148.85 158.22L156.57 167.41M138.00 165.82L144.00 176.21M125.99 171.42L130.10 182.69M113.20 174.85L115.28 186.66M100.00 176.00L100.00 188.00M86.80 174.85L84.72 186.66M74.01 171.42L69.90 182.69M62.00 165.82L56.00 176.21M51.15 158.22L43.43 167.41M41.78 148.85L32.59 156.57M34.18 138.00L23.79 144.00M28.58 125.99L17.31 130.10M25.15 113.20L13.34 115.28M24.00 100.00L12.00 100.00M25.15 86.80L13.34 84.72M28.58 74.01L17.31 69.90M34.18 62.00L23.79 56.00M41.78 51.15L32.59 43.43M51.15 41.78L43.43 32.59M62.00 34.18L56.00 23.79M74.01 28.58L69.90 17.31M86.80 25.15L84.72 13.34" stroke-width="2" stroke-linecap="round"/><path d="M100.00 26.00L100.00 10.00M174.00 100.00L190.00 100.00M100.00 174.00L100.00 190.00M26.00 100.00L10.00 100.00" stroke-width="4" stroke-linecap="round"/></g><circle cx="100" cy="93" r="11" fill="currentColor"/><path d="M94 99h12l3.5 22h-19z" fill="currentColor"/></svg>
+      <p class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>गोपनीयता नीति</p>
+      <h1>Souro Vault <span class="accent">Go</span></h1>
+      <p class="lede">Souro Vault Go एक निजी वॉल्ट है जो आपके फ़ोन पर काम करता है और जिसका खर्च विज्ञापनों से चलता है। यहाँ ठीक-ठीक बताया गया है कि क्या आपके फ़ोन पर रहता है और विज्ञापन भागीदारों को क्या मिलता है।</p>
+      <ul class="chips"><li><svg class="i" aria-hidden="true"><use href="#i-megaphone"/></svg>मुफ़्त, विज्ञापनों के साथ</li><li><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>वॉल्ट आपके फ़ोन पर ही रहता है</li><li><svg class="i" aria-hidden="true"><use href="#i-toggle"/></svg>विज्ञापन बंद किए जा सकते हैं</li></ul>
+      <dl class="facts"><div><dt>प्रभावी तिथि</dt><dd>1 नवंबर, 2026</dd></div><div><dt>ऐप</dt><dd>Android के लिए Souro Vault Go</dd></div><div><dt>पैकेज</dt><dd><code>com.souro.multi_vault.free</code></dd></div><div><dt>डेवलपर</dt><dd>SouroApps</dd></div><div><dt>संपर्क</dt><dd><a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a></dd></div></dl>
+      <p class="tr-note"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg><span>यह एक अनुवाद है। अंग्रेज़ी संस्करण से कोई अंतर होने पर अंग्रेज़ी संस्करण ही मान्य होगा। <a href="index.html?lang=en" data-lang="en">English</a></span></p>
+    </div>
+  </section>
+  <div class="wrap layout">
+    <nav class="toc" aria-label="विषय-सूची">
+      <details open>
+        <summary>विषय-सूची<svg class="i" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+        <ol>
+        <li><a href="#summary">सारांश</a></li>
+        <li><a href="#who">ज़िम्मेदार कौन है</a></li>
+        <li><a href="#on-your-phone">ऐप आपके फ़ोन पर क्या संभालता है</a></li>
+        <li><a href="#what-we-collect">हम क्या इकट्ठा करते हैं</a></li>
+        <li><a href="#advertising">विज्ञापन</a></li>
+        <li><a href="#permissions">ऐप कौन-सी अनुमतियाँ माँगता है</a></li>
+        <li><a href="#purchases">खरीदारी</a></li>
+        <li><a href="#leaving-the-vault">डेटा वॉल्ट से कब बाहर जाता है</a></li>
+        <li><a href="#security">सुरक्षा</a></li>
+        <li><a href="#retention">डेटा कब तक रखा जाता है</a></li>
+        <li><a href="#children">बच्चे</a></li>
+        <li><a href="#rights">आपके अधिकार</a></li>
+        <li><a href="#changes">इस नीति में बदलाव</a></li>
+        <li><a href="#contact">संपर्क</a></li>
+        </ol>
+      </details>
+    </nav>
+    <article class="policy" id="policy" tabindex="-1">
+<section id="summary" aria-labelledby="summary-h">
+  <h2 id="summary-h"><span class="num" aria-hidden="true">1</span><span>सारांश</span><a class="anchor" href="#summary" aria-label="अनुभाग का लिंक 1">#</a></h2>
+<p class="intro">Souro Vault Go एक निजी वॉल्ट है जो आपके फ़ोन पर काम करता है और जिसका खर्च विज्ञापनों से चलता है।</p>
+<div class="glance">
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-lock"></use></svg></span>
+<h3>आप वॉल्ट में जो रखते हैं, वह कभी आपके फ़ोन से बाहर नहीं जाता</h3>
+<p>यह फ़ोन पर ही उन कुंजियों से एन्क्रिप्ट होता है जो आपके PIN और फ़ोन के सुरक्षित हार्डवेयर से सुरक्षित हैं। हम न उसे देख सकते हैं, न रिकवर कर सकते हैं, न आपका PIN रीसेट कर सकते हैं। कोई खाता या साइन-इन नहीं है।</p>
+</article>
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-cloud-off"></use></svg></span>
+<h3>कोई सर्वर नहीं, हमारी अपनी कोई एनालिटिक्स नहीं</h3>
+<p>हम ऐसा कोई सर्वर नहीं चलाते जो आपका डेटा प्राप्त करे, और ऐप की अपनी कोई एनालिटिक्स नहीं है।</p>
+</article>
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-megaphone"></use></svg></span>
+<h3>विज्ञापन विज्ञापन भागीदारों से आते हैं</h3>
+<p>विज्ञापन दिखाने के लिए इन भागीदारों को आपके डिवाइस और विज्ञापनों के उपयोग के बारे में कुछ जानकारी मिलती है (<a href="#advertising">अनुभाग 5</a>)। उन्हें आपके वॉल्ट की सामग्री, आपका PIN, आपकी फ़ाइलें, नोट्स या संपर्क कभी नहीं मिलते।</p>
+</article>
+<article class="g-card">
+<span class="g-icon"><svg class="i" aria-hidden="true"><use href="#i-toggle"></use></svg></span>
+<h3>आप विज्ञापन बंद कर सकते हैं</h3>
+<p>Google Play से “कोई विज्ञापन नहीं” या Pro खरीदें। तब ऐप कोई विज्ञापन अनुरोध नहीं करता और विज्ञापन सॉफ़्टवेयर शुरू नहीं करता। जहाँ कानून ज़रूरी करता है, वहाँ निजीकृत विज्ञापन दिखाने से पहले आपकी सहमति ली जाती है।</p>
+</article>
+</div>
+</section>
+<section id="who" aria-labelledby="who-h">
+  <h2 id="who-h"><span class="num" aria-hidden="true">2</span><span>ज़िम्मेदार कौन है</span><a class="anchor" href="#who" aria-label="अनुभाग का लिंक 2">#</a></h2>
+<p>यह ऐप SouroApps (“हम”) द्वारा प्रकाशित है। इस नीति या अपने डेटा के बारे में किसी भी प्रश्न के लिए <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a> पर लिखें।</p>
+</section>
+<section id="on-your-phone" aria-labelledby="on-your-phone-h">
+  <h2 id="on-your-phone-h"><span class="num" aria-hidden="true">3</span><span>ऐप आपके फ़ोन पर क्या संभालता है</span><a class="anchor" href="#on-your-phone" aria-label="अनुभाग का लिंक 3">#</a></h2>
+<p>यहाँ की हर चीज़ आपके फ़ोन पर, ऐप के निजी स्टोरेज में रहती है, जब तक आप स्वयं उसे बाहर न ले जाएँ (<a href="#leaving-the-vault">अनुभाग 8</a>)।</p>
+<h3><span class="sub">3.1</span>आप वॉल्ट में क्या रखते हैं</h3>
+<ul class="dots">
+<li>आपके द्वारा जोड़ी गई फ़ोटो, वीडियो, ऑडियो, दस्तावेज़ और अन्य फ़ाइलें।</li>
+<li>निजी नोट्स, निजी संपर्क (नाम, फ़ोन नंबर, ईमेल, नोट, फ़ोटो), और ऐप में रिकॉर्ड किए गए वॉइस या वीडियो मेमो।</li>
+<li>उनके नाम, एल्बम और तारीखें।</li>
+</ul>
+<p>यह सब AES-256-GCM से एन्क्रिप्ट किया जाता है। फ़ाइलें लिखे जाते समय ही एन्क्रिप्ट होती हैं, और ऐप कभी भी किसी फ़ाइल की बिना एन्क्रिप्ट की गई कॉपी नहीं रखता। कुछ अल्पकालिक अपवाद वॉल्ट लॉक होने पर हटा दिए जाते हैं: PDF व्यूअर में खुला दस्तावेज़, रिकॉर्ड होते समय वीडियो, और वह फ़ाइल जिसे आप किसी दूसरे ऐप में खोलना चुनते हैं।</p>
+<h3><span class="sub">3.2</span>आपका PIN और बायोमेट्रिक्स</h3>
+<ul class="dots">
+<li><strong>आपका PIN कभी सेव नहीं होता</strong>, बदले हुए रूप में भी नहीं। इसका उपयोग केवल उसी क्षण होता है जब आप उसे टाइप करते हैं, ताकि आपके वॉल्ट की कुंजियाँ खुल सकें।</li>
+<li><strong>बायोमेट्रिक अनलॉक</strong> पूरी तरह Android संभालता है। ऐप को आपके फ़िंगरप्रिंट या चेहरे का डेटा कभी नहीं मिलता; Android केवल यह बताता है कि आपको पहचाना गया या नहीं।</li>
+</ul>
+<h3><span class="sub">3.3</span>खोज और डिवाइस पर AI</h3>
+<ul class="dots">
+<li>कंटेंट सर्च Google ML Kit के उन मॉडलों का उपयोग करता है जो <strong>ऐप में ही बने हुए हैं</strong>। वे आपके वॉल्ट की फ़ोटो, PDF और टेक्स्ट फ़ाइलों को फ़ोन पर ही देखते हैं; कुछ भी डाउनलोड या भेजा नहीं जाता, और लाइब्रेरी की अपनी उपयोग रिपोर्ट बंद रहती हैं। परिणाम एन्क्रिप्ट करके रखे जाते हैं।</li>
+<li>फ़ोन में खोजना (“यह डिवाइस”) फ़ोन के अपने मीडिया और आपके चुने फ़ोल्डरों को फ़ोन पर ही पढ़ता है, और परिणाम केवल मेमोरी में रखता है।</li>
+</ul>
+<h3><span class="sub">3.4</span>घुसपैठिए की फ़ोटो और प्रयास लॉग (डिफ़ॉल्ट रूप से बंद)</h3>
+<ul class="dots">
+<li>अगर आप घुसपैठिए की फ़ोटो चालू करते हैं, तो कई गलत PIN (डिफ़ॉल्ट रूप से तीन) के बाद सामने के कैमरे से फ़ोटो ली जाती है। वह एन्क्रिप्ट होती है और केवल आपके वॉल्ट के अंदर दिखती है।</li>
+<li>प्रयास लॉग यह दर्ज करता है कि कब, कहाँ और कितने अंक डाले गए – अंक स्वयं कभी नहीं।</li>
+<li>कुछ भी अपलोड नहीं होता।</li>
+</ul>
+<h3><span class="sub">3.5</span>रोज़मर्रा के टूल (कैलकुलेटर, नोटपैड, गैलरी, म्यूज़िक प्लेयर)</h3>
+<ul class="dots">
+<li>ये टूल फ़ोन की अपनी फ़ोटो, वीडियो और संगीत फ़ोन पर ही दिखाते और चलाते हैं।</li>
+<li>वॉल्ट के <strong>बाहर</strong> इनमें आप जो करते हैं, वह किसी सामान्य ऐप के डेटा की तरह, <strong>बिना एन्क्रिप्शन के</strong>, रखा जाता है: नोटपैड के नोट्स, कैलकुलेटर का इतिहास, गैलरी और संगीत के पसंदीदा।</li>
+<li>इन टूल से आप जो आइटम वॉल्ट में ले जाते हैं, वे वॉल्ट की बाकी हर चीज़ की तरह एन्क्रिप्ट होते हैं।</li>
+</ul>
+<h3><span class="sub">3.6</span>सेटिंग्स और ऐप की स्थिति</h3>
+<ul class="dots">
+<li>आपकी सेटिंग्स। जो सेटिंग्स यह बता सकती हैं कि ऐप किस टूल के रूप में खुलता है, उन्हें हार्डवेयर में रखी कुंजी से बदले हुए रूप में रखा जाता है।</li>
+<li>आपका प्लान (मुफ़्त, कोई विज्ञापन नहीं, या Pro)।</li>
+<li>ऑफ़र और विज्ञापनों का समय तय करने वाले काउंटर: जैसे पिछला फ़ुल-स्क्रीन विज्ञापन कब दिखाया गया, आज आपने कितने इनाम वाले विज्ञापन देखे, और आपने ऐप कितने दिन इस्तेमाल किया।</li>
+</ul>
+<p>ये सब फ़ोन पर ही रहते हैं।</p>
+</section>
+<section id="what-we-collect" aria-labelledby="what-we-collect-h">
+  <h2 id="what-we-collect-h"><span class="num" aria-hidden="true">4</span><span>हम क्या इकट्ठा करते हैं</span><a class="anchor" href="#what-we-collect" aria-label="अनुभाग का लिंक 4">#</a></h2>
+<div class="callout">
+<svg class="i" aria-hidden="true"><use href="#i-eye-off"></use></svg>
+<div>
+<p><strong>हम – डेवलपर – कोई निजी डेटा इकट्ठा नहीं करते।</strong> हमारे पास ऐसा कोई सर्वर नहीं है जो ऐप से जानकारी प्राप्त करे, और हम आपकी जानकारी नहीं बेचते।</p>
+<p>अनुभाग 5 में बताई गई जानकारी विज्ञापन दिखाने के लिए विज्ञापन भागीदार सीधे ऐप से इकट्ठा करते हैं।</p>
+</div>
+</div>
+</section>
+<section id="advertising" aria-labelledby="advertising-h">
+  <h2 id="advertising-h"><span class="num" aria-hidden="true">5</span><span>विज्ञापन</span><a class="anchor" href="#advertising" aria-label="अनुभाग का लिंक 5">#</a></h2>
+<h3><span class="sub">5.1</span>विज्ञापन भागीदारों को क्या मिलता है</h3>
+<p>जब मुफ़्त उपयोगकर्ताओं को विज्ञापन दिखाए जाते हैं, तो ऐप का विज्ञापन सॉफ़्टवेयर (और जिन विज्ञापन नेटवर्कों के साथ वह काम करता है) ये चीज़ें इकट्ठा कर सकता है:</p>
+<ul class="dots">
+<li><strong>डिवाइस पहचानकर्ता:</strong> Android विज्ञापन ID, ऐप सेट ID और इसी तरह के पहचानकर्ता।</li>
+<li><strong>आपका IP पता</strong>, और उससे निकाला गया अनुमानित स्थान (देश या शहर स्तर पर – ऐप के पास स्थान की अनुमति नहीं है और यह कभी GPS नहीं पढ़ता)।</li>
+<li><strong>डिवाइस और ऐप की जानकारी:</strong> फ़ोन मॉडल, Android वर्ज़न, भाषा, स्क्रीन का आकार, नेटवर्क का प्रकार, इस ऐप का नाम और वर्ज़न।</li>
+<li><strong>विज्ञापन से जुड़ी गतिविधि:</strong> कौन-से विज्ञापन दिखाए गए, देखे गए, क्लिक किए गए या अंत तक देखे गए।</li>
+<li><strong>डायग्नोस्टिक्स:</strong> विज्ञापन सॉफ़्टवेयर के प्रदर्शन की जानकारी, जैसे लोड होने का समय और त्रुटियाँ।</li>
+</ul>
+<p>वे इस जानकारी का उपयोग विज्ञापन चुनने और दिखाने, उन्हें मापने, एक ही विज्ञापन कितनी बार दिखे इसे सीमित करने और धोखाधड़ी रोकने के लिए करते हैं। आपकी पसंद के अनुसार (अनुभाग 5.3) विज्ञापन आपकी रुचियों के अनुसार निजीकृत हो सकते हैं।</p>
+<div class="never">
+<p class="never-title"><span class="badge"><svg class="i" aria-hidden="true"><use href="#i-x"></use></svg></span>विज्ञापन भागीदारों को कभी नहीं मिलता</p>
+<ul class="pills">
+<li>आपके वॉल्ट की कोई भी चीज़</li>
+<li>आपका PIN</li>
+<li>आपकी फ़ाइलें और फ़ोटो</li>
+<li>आपके नोट्स</li>
+<li>आपके संपर्क</li>
+<li>आपकी रिकॉर्डिंग</li>
+<li>आपके खोज शब्द</li>
+<li>कैलकुलेटर, नोटपैड, गैलरी या म्यूज़िक प्लेयर की कोई भी चीज़</li>
+</ul>
+</div>
+<h3><span class="sub">5.2</span>हमारे विज्ञापन भागीदार</h3>
+<p>ऐप अपने विज्ञापन <strong>AppLovin MAX</strong> के ज़रिए चलाता है। हर विज्ञापन के लिए MAX तय करता है कि नीचे दिए नेटवर्कों में से कौन उसे दिखाएगा। हर भागीदार अपनी गोपनीयता नीति के तहत डेटा संभालता है।</p>
+<ul class="partners">
+<!-- PARTNER: AppLovin MAX -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">A</span>
+<div><span class="partner-name">AppLovin MAX</span><span class="partner-role">विज्ञापन मीडिएशन, और AppLovin के अपने विज्ञापन</span></div>
+</div>
+<div class="partner-links">
+<a href="https://legal.applovin.com/privacy/" rel="noopener" target="_blank">गोपनीयता नीति<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+<a href="https://dash.applovin.com/p/how-applovin-shows-you-ads" rel="noopener" target="_blank">विज्ञापन विकल्प<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: InMobi -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">I</span>
+<div><span class="partner-name">InMobi</span><span class="partner-role">विज्ञापन नेटवर्क</span></div>
+</div>
+<div class="partner-links">
+<a href="https://advertising.inmobi.com/privacy-policy" rel="noopener" target="_blank">गोपनीयता नीति<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+<a href="https://advertising.inmobi.com/page/opt-out/" rel="noopener" target="_blank">ऑप्ट आउट<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Meta Audience Network -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">M</span>
+<div><span class="partner-name">Meta Audience Network</span><span class="partner-role">विज्ञापन नेटवर्क</span></div>
+</div>
+<div class="partner-links">
+<a href="https://www.facebook.com/privacy/policy/" rel="noopener" target="_blank">गोपनीयता नीति<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Liftoff Monetize (Vungle) -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">L</span>
+<div><span class="partner-name">Liftoff Monetize</span><span class="partner-role">विज्ञापन नेटवर्क (पहले Vungle)</span></div>
+</div>
+<div class="partner-links">
+<a href="https://liftoff.ai/privacy-policy/" rel="noopener" target="_blank">गोपनीयता नीति<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Mintegral -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">M</span>
+<div><span class="partner-name">Mintegral</span><span class="partner-role">विज्ञापन नेटवर्क</span></div>
+</div>
+<div class="partner-links">
+<a href="https://www.mintegral.com/en/privacy" rel="noopener" target="_blank">गोपनीयता नीति<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+<!-- PARTNER: Yandex Ads -->
+<li class="partner">
+<div class="partner-head">
+<span aria-hidden="true" class="monogram">Y</span>
+<div><span class="partner-name">Yandex Ads</span><span class="partner-role">विज्ञापन नेटवर्क (Yandex Mobile Ads)</span></div>
+</div>
+<span class="tag">मुख्य रूप से रूस और CIS देश</span>
+<div class="partner-links">
+<a href="https://yandex.com/legal/international_ads_privacy" rel="noopener" target="_blank">गोपनीयता नीति<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+<a href="https://yandex.com/legal/confidential/" rel="noopener" target="_blank">Yandex गोपनीयता<svg class="i" aria-hidden="true"><use href="#i-ext"></use></svg></a>
+</div>
+</li>
+</ul>
+<p class="note">हर नेटवर्क हर देश में विज्ञापन नहीं दिखाता। अगर हम कोई भागीदार जोड़ते या हटाते हैं, तो उस ऐप वर्ज़न के जारी होने से पहले यह सूची अपडेट करते हैं।</p>
+<h3><span class="sub">5.3</span>आपके विकल्प</h3>
+<ul class="choices">
+<li>
+<strong>सहमति</strong>
+<p>जहाँ आपके देश का कानून ज़रूरी करता है, वहाँ ऐप निजीकृत विज्ञापन दिखाने से पहले आपकी सहमति माँगता है। अगर ऐप ने आपसे पूछा था, तो आप कभी भी सेटिंग्स › विज्ञापनों की गोपनीयता सेटिंग्स में अपनी पसंद बदल सकते हैं।</p>
+</li>
+<li>
+<strong>विज्ञापन ID</strong>
+<p>अपने फ़ोन की सेटिंग्स (सेटिंग्स › गोपनीयता › विज्ञापन, या Google › विज्ञापन) में आप अपनी विज्ञापन ID रीसेट या हटा सकते हैं। तब भागीदार विज्ञापनों को उससे नहीं जोड़ सकते।</p>
+</li>
+<li>
+<strong>बिल्कुल कोई विज्ञापन नहीं</strong>
+<p>“कोई विज्ञापन नहीं” या Pro खरीदें (<a href="#purchases">अनुभाग 7</a>)। तब ऐप कोई विज्ञापन अनुरोध नहीं करता।</p>
+</li>
+<li>
+<strong>कनेक्शन नहीं</strong>
+<p>ऐप जाँचता है कि फ़ोन ऑनलाइन है या नहीं, ताकि जब विज्ञापन लोड न हो सके तब कोई विज्ञापन न दिखाया जाए और न पेश किया जाए। यह जाँच फ़ोन पर ही रहती है।</p>
+</li>
+</ul>
+<p><strong>विज्ञापन कहाँ दिखते हैं।</strong></p>
+<div class="split">
+<div class="yes">
+<h4><svg class="i" aria-hidden="true"><use href="#i-check"></use></svg>विज्ञापन दिख सकते हैं</h4>
+<ul>
+<li>जहाँ आप अपनी सूचियाँ देखते हैं</li>
+<li>वॉल्ट की होम स्क्रीन पर</li>
+<li>स्वाभाविक ठहरावों पर</li>
+<li>जब आप इनाम के लिए कोई विज्ञापन देखना चुनते हैं</li>
+</ul>
+</div>
+<div class="no">
+<h4><svg class="i" aria-hidden="true"><use href="#i-x"></use></svg>विज्ञापन कभी नहीं दिखते</h4>
+<ul>
+<li>PIN स्क्रीन पर</li>
+<li>फ़ोटो और वीडियो व्यूअर में</li>
+<li>प्लेयर, एडिटर, कैमरा या रिकॉर्डर में</li>
+<li>सेटिंग्स में</li>
+<li>बैकअप स्क्रीन पर</li>
+</ul>
+</div>
+</div>
+<h3><span class="sub">5.4</span>जानकारी कहाँ प्रोसेस होती है</h3>
+<p>हमारे विज्ञापन भागीदार कई देशों में स्थित हैं – जैसे संयुक्त राज्य अमेरिका, भारत, चीन और संयुक्त अरब अमीरात – और वे दूसरे देशों में भी जानकारी प्रोसेस कर सकते हैं। Yandex बताता है कि उसकी इकट्ठा की गई जानकारी रूस भेजी जा सकती है। ये देश निजी डेटा की उसी तरह रक्षा नहीं कर सकते जैसे आपका देश करता है। हर भागीदार अपनी गोपनीयता नीति में अपने सुरक्षा उपाय बताता है (अनुभाग 5.2)।</p>
+<h3><span class="sub">5.5</span>कानूनी आधार</h3>
+<p>जहाँ EU या UK के GDPR जैसा कोई कानून कानूनी आधार माँगता है:</p>
+<ul class="dots">
+<li>निजीकृत विज्ञापन, और विज्ञापन के लिए आपके डिवाइस पर पहचानकर्ता सेव करना या पढ़ना, आपकी <strong>सहमति</strong> पर आधारित हैं।</li>
+<li>गैर-निजीकृत विज्ञापन, विज्ञापन मापन और धोखाधड़ी की रोकथाम, एक मुफ़्त ऐप का खर्च चलाने और विज्ञापनों को ईमानदार रखने में हमारे और हमारे भागीदारों के <strong>वैध हित</strong> पर आधारित हैं।</li>
+</ul>
+<p>आप कभी भी अपनी सहमति वापस ले सकते हैं (अनुभाग 5.3)।</p>
+<h3><span class="sub">5.6</span>“शेयरिंग” और लक्षित विज्ञापन</h3>
+<p>कुछ कानूनों के तहत – जैसे कैलिफ़ोर्निया और अमेरिका के अन्य राज्यों के कानून – निजीकृत विज्ञापनों के लिए विज्ञापन भागीदारों के साथ डिवाइस पहचानकर्ता साझा करना क्रॉस-कॉन्टेक्स्ट व्यवहारिक विज्ञापन के लिए “शेयरिंग” या “लक्षित विज्ञापन” माना जा सकता है। आप अपनी विज्ञापन ID हटाकर या रीसेट करके (अनुभाग 5.3), जहाँ ऐप विकल्प देता है वहाँ निजीकृत विज्ञापनों को मना करके, या हमें लिखकर इससे बाहर हो सकते हैं। हम निजी जानकारी पैसे के बदले नहीं बेचते।</p>
+</section>
+<section id="permissions" aria-labelledby="permissions-h">
+  <h2 id="permissions-h"><span class="num" aria-hidden="true">6</span><span>ऐप कौन-सी अनुमतियाँ माँगता है</span><a class="anchor" href="#permissions" aria-label="अनुभाग का लिंक 6">#</a></h2>
+<p>हर अनुमति केवल तब माँगी जाती है जब आप वह सुविधा इस्तेमाल करते हैं जिसे उसकी ज़रूरत है। मना करने पर केवल वह सुविधा बंद होती है।</p>
+<div class="table-wrap">
+<table class="stack">
+<thead><tr><th scope="col">अनुमति</th><th scope="col">क्यों</th></tr></thead>
+<tbody>
+<tr><td>इंटरनेट, नेटवर्क की स्थिति</td><td>विज्ञापन और विज्ञापन सहमति फ़ॉर्म लोड करना; यह जाँचना कि विज्ञापन लोड हो सकता है या नहीं। आपके वॉल्ट से कभी कुछ नहीं भेजा जाता</td></tr>
+<tr><td>विज्ञापन ID</td><td>विज्ञापनों के लिए विज्ञापन भागीदार इसका उपयोग करते हैं (अनुभाग 5)</td></tr>
+<tr><td>कैमरा</td><td>फ़ोटो और वीडियो सीधे वॉल्ट में; वीडियो मेमो; घुसपैठिए की फ़ोटो (अगर आप चालू करें)</td></tr>
+<tr><td>माइक्रोफ़ोन</td><td>आपके द्वारा स्वयं रिकॉर्ड किए गए वॉइस और वीडियो मेमो। कभी बैकग्राउंड में नहीं, और कभी कॉल के दौरान नहीं</td></tr>
+<tr><td>फ़ोटो और वीडियो (और Android 12 व पुराने वर्ज़न पर स्टोरेज)</td><td>गैलरी टूल; स्वचालित इम्पोर्ट (अगर आप चालू करें); फ़ोन में खोज। फ़ाइलें जोड़ना Android के अपने पिकर से होता है और इसके लिए किसी अनुमति की ज़रूरत नहीं</td></tr>
+<tr><td>संगीत और ऑडियो</td><td>म्यूज़िक प्लेयर टूल; फ़ोन में खोज</td></tr>
+<tr><td>संपर्क</td><td>केवल तब, जब आप फ़ोन से एक साथ कई संपर्क इम्पोर्ट करें</td></tr>
+<tr><td>सूचनाएँ</td><td>इम्पोर्ट की प्रगति, संगीत नियंत्रण, नई फ़ाइलें इम्पोर्ट करने के सुझाव</td></tr>
+<tr><td>बायोमेट्रिक्स</td><td>फ़िंगरप्रिंट या चेहरे से अनलॉक करना</td></tr>
+<tr><td>फ़ोरग्राउंड सेवा, वेक लॉक, स्टार्ट-अप पर चलना</td><td>बड़े इम्पोर्ट पूरे करना और बैकग्राउंड में संगीत चलाना; रीस्टार्ट के बाद स्वचालित इम्पोर्ट फिर शुरू करना</td></tr>
+<tr><td>वाइब्रेशन</td><td>कुंजी टैप और फ़ीडबैक</td></tr>
+<tr><td>Google Play बिलिंग</td><td>“कोई विज्ञापन नहीं” या Pro खरीदना</td></tr>
+</tbody>
+</table>
+</div>
+<p>ऐप स्थान, SMS, कॉल लॉग, फ़ोन कॉल, खातों या “सभी फ़ाइलों” की पहुँच <strong>नहीं</strong> माँगता।</p>
+</section>
+<section id="purchases" aria-labelledby="purchases-h">
+  <h2 id="purchases-h"><span class="num" aria-hidden="true">7</span><span>खरीदारी</span><a class="anchor" href="#purchases" aria-label="अनुभाग का लिंक 7">#</a></h2>
+<ul class="dots">
+<li>“कोई विज्ञापन नहीं” और Pro <strong>Google Play</strong> के ज़रिए, Google की शर्तों और <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">गोपनीयता नीति</a> के तहत खरीदे जाते हैं। हम आपका भुगतान विवरण कभी नहीं देखते।</li>
+<li>ऐप को Google Play से यह पुष्टि मिलती है कि इस Google खाते ने क्या खरीदा है; ऐप इसे फ़ोन पर जाँचता है और आपका प्लान याद रखता है।</li>
+<li>सदस्यताएँ Google Play › भुगतान और सदस्यताएँ में प्रबंधित या रद्द करें।</li>
+</ul>
+</section>
+<section id="leaving-the-vault" aria-labelledby="leaving-the-vault-h">
+  <h2 id="leaving-the-vault-h"><span class="num" aria-hidden="true">8</span><span>डेटा वॉल्ट से कब बाहर जाता है – केवल जब आप ऐसा करें</span><a class="anchor" href="#leaving-the-vault" aria-label="अनुभाग का लिंक 8">#</a></h2>
+<p>डेटा वॉल्ट से केवल आपकी की गई कार्रवाइयों से बाहर जाता है:</p>
+<ul class="actions">
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-share"></use></svg></span><p>किसी आइटम को दूसरे ऐप के साथ <strong>शेयर करना</strong>।</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-restore"></use></svg></span><p>आइटम को फ़ोन के सामान्य स्टोरेज में <strong>रीस्टोर करना</strong>। तब वे एन्क्रिप्टेड नहीं रहते।</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-open"></use></svg></span><p>किसी दूसरे ऐप में <strong>खोलना</strong>। उस ऐप के लिए एक अस्थायी कॉपी बनती है, जो वॉल्ट लॉक होने पर हटा दी जाती है।</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-archive"></use></svg></span><p><strong>एन्क्रिप्टेड बैकअप:</strong> आपकी चुनी जगह पर सेव की गई फ़ाइल, जो केवल आपको पता पासफ़्रेज़ से एन्क्रिप्ट होती है।</p></li>
+<li><span class="a-icon"><svg class="i" aria-hidden="true"><use href="#i-user"></use></svg></span><p>संपर्कों को .vcf फ़ाइल के रूप में <strong>एक्सपोर्ट करना</strong>। यह एन्क्रिप्टेड नहीं होती, और ऐप आपको पहले चेतावनी देता है।</p></li>
+</ul>
+<p>शेयर या रीस्टोर करने पर फ़ाइलों में पहले से मौजूद जानकारी (जैसे किसी फ़ोटो की तारीख या स्थान टैग) बनी रहती है।</p>
+</section>
+<section id="security" aria-labelledby="security-h">
+  <h2 id="security-h"><span class="num" aria-hidden="true">9</span><span>सुरक्षा</span><a class="anchor" href="#security" aria-label="अनुभाग का लिंक 9">#</a></h2>
+<ul class="dots">
+<li>AES-256-GCM एन्क्रिप्शन।</li>
+<li>कुंजियाँ आपके PIN और आपके फ़ोन के सुरक्षित हार्डवेयर (Android Keystore) से सुरक्षित हैं।</li>
+<li>वॉल्ट की स्क्रीन का स्क्रीनशॉट नहीं लिया जा सकता।</li>
+<li>स्क्रीन बंद होने पर वॉल्ट लॉक हो जाता है और, जब तक आप सेटिंग न बदलें, ऐप छोड़ने पर भी।</li>
+</ul>
+<div class="callout warn">
+<svg class="i" aria-hidden="true"><use href="#i-alert"></use></svg>
+<div>
+<p><strong>कोई भी सुरक्षा पूर्ण नहीं होती।</strong> अगर आप अपना PIN भूल जाते हैं, तो कोई भी – हम भी नहीं – वॉल्ट नहीं खोल सकता।</p>
+<p>वॉल्ट में ले जाई गई फ़ाइल की मूल प्रति को उतनी अच्छी तरह हटाया जाता है जितना Android अनुमति देता है, लेकिन फ़्लैश स्टोरेज में उसके निशान ओवरराइट होने तक रह सकते हैं।</p>
+</div>
+</div>
+</section>
+<section id="retention" aria-labelledby="retention-h">
+  <h2 id="retention-h"><span class="num" aria-hidden="true">10</span><span>डेटा कब तक रखा जाता है, और उसे हटाना</span><a class="anchor" href="#retention" aria-label="अनुभाग का लिंक 10">#</a></h2>
+<p><strong>आपके फ़ोन पर:</strong></p>
+<ul class="dots">
+<li>जब तक आप न हटाएँ, सब कुछ रहता है;</li>
+<li>हटाए गए आइटम 30 दिन रिकवरी बिन में रहते हैं, जब तक आप उसे खाली न करें;</li>
+<li><strong>अनइंस्टॉल करने से ऐप का सारा डेटा, आपके वॉल्ट समेत, हट जाता है</strong>, इसलिए अगर आप उसे रखना चाहते हैं तो पहले एन्क्रिप्टेड बैकअप बना लें;</li>
+<li>इस ऐप के लिए Android का क्लाउड बैकअप और एक फ़ोन से दूसरे फ़ोन में ट्रांसफ़र बंद है।</li>
+</ul>
+<p><strong>विज्ञापन भागीदारों के पास:</strong> हर भागीदार अपना इकट्ठा किया डेटा उतने समय तक रखता है जितना उसकी गोपनीयता नीति में लिखा है। आप अपनी विज्ञापन ID हटाकर इसे सीमित कर सकते हैं, या सीधे भागीदार से कह सकते हैं। वह डेटा हमारे पास नहीं है, इसलिए हम उसे उनकी ओर से नहीं हटा सकते।</p>
+</section>
+<section id="children" aria-labelledby="children-h">
+  <h2 id="children-h"><span class="num" aria-hidden="true">11</span><span>बच्चे</span><a class="anchor" href="#children" aria-label="अनुभाग का लिंक 11">#</a></h2>
+<p>यह ऐप 13 वर्ष से कम उम्र के बच्चों (या आपके देश की न्यूनतम आयु से कम) के लिए नहीं है। हम जानबूझकर बच्चों से जानकारी इकट्ठा नहीं करते, और ऐप के विज्ञापन बच्चों के लिए नहीं हैं। अगर आपको लगता है कि किसी बच्चे ने ऐप का उपयोग किया है और आप चाहते हैं कि कोई भागीदार डेटा हटाए, तो हमसे संपर्क करें – हम उन तक पहुँचने में आपकी मदद करेंगे।</p>
+</section>
+<section id="rights" aria-labelledby="rights-h">
+  <h2 id="rights-h"><span class="num" aria-hidden="true">12</span><span>आपके अधिकार</span><a class="anchor" href="#rights" aria-label="अनुभाग का लिंक 12">#</a></h2>
+<p>आप जहाँ रहते हैं उसके आधार पर (जैसे EU या UK के GDPR, कैलिफ़ोर्निया के CCPA, भारत के डिजिटल व्यक्तिगत डेटा संरक्षण अधिनियम, या रूस के व्यक्तिगत डेटा संबंधी संघीय कानून संख्या 152-FZ के तहत), आपको ये अधिकार हो सकते हैं:</p>
+<ul class="dots">
+<li>अपने निजी डेटा तक पहुँचना, उसे सुधारना या हटाना;</li>
+<li>उसके उपयोग पर आपत्ति करना या उसे सीमित करना;</li>
+<li>सहमति वापस लेना;</li>
+<li>किसी डेटा-संरक्षण प्राधिकरण से शिकायत करना।</li>
+</ul>
+<p>हमारे पास आपका कोई निजी डेटा नहीं है। किसी विज्ञापन भागीदार के पास मौजूद डेटा के लिए अनुभाग 5.3 के विकल्प इस्तेमाल करें या उस भागीदार से संपर्क करें। हमें मदद करके खुशी होगी – <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a> पर लिखें।</p>
+</section>
+<section id="changes" aria-labelledby="changes-h">
+  <h2 id="changes-h"><span class="num" aria-hidden="true">13</span><span>इस नीति में बदलाव</span><a class="anchor" href="#changes" aria-label="अनुभाग का लिंक 13">#</a></h2>
+<p>अगर ऐप डेटा संभालने का तरीका बदलता है – जैसे कोई नया विज्ञापन भागीदार – तो उस ऐप वर्ज़न के जारी होने से पहले हम यह पेज और इसकी प्रभावी तिथि अपडेट करेंगे।</p>
+</section>
+<section id="contact" aria-labelledby="contact-h">
+  <h2 id="contact-h"><span class="num" aria-hidden="true">14</span><span>संपर्क</span><a class="anchor" href="#contact" aria-label="अनुभाग का लिंक 14">#</a></h2>
+<div class="contact-card">
+<address><strong>SouroApps</strong><br/>ईमेल: <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a></address>
+<a class="btn" href="mailto:souroapps.support@gmail.com?subject=Souro%20Vault%20Go%20privacy"><svg class="i" aria-hidden="true"><use href="#i-mail"></use></svg>हमें ईमेल करें</a>
+</div>
+</section>
+
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <span>SouroApps</span>
+      <a href="mailto:souroapps.support@gmail.com">souroapps.support@gmail.com</a>
+    </div>
+    <p class="small">यह वेबसाइट कोई कुकी, एनालिटिक्स या बाहरी फ़ॉन्ट इस्तेमाल नहीं करती। यह केवल आपके अपने ब्राउज़र में आपकी थीम और भाषा की पसंद याद रखती है। यह GitHub Pages पर होस्ट है; सुरक्षा के लिए GitHub आगंतुकों के IP पते लॉग कर सकता है, जैसा कि <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub गोपनीयता कथन</a> में बताया गया है।</p>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="ऊपर जाएँ"><svg class="i" aria-hidden="true"><use href="#i-up"/></svg></button>
+</body>
+</html>
